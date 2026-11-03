@@ -2,7 +2,7 @@
   "git_commit": "9ffd26a4419cf2d307fefddcc9b7bde1c0792136",
   "git_branch": "repro/controlled-rerun",
   "date_utc": "2026-11-02 07:40:51",
-  "host": "LLM-develop1",
+  "host": "workstation",
   "gpu": "NVIDIA RTX 6000 Ada Generation, 49140 MiB, 580.178.04",
   "ollama_version": "ollama version is 0.40.8",
   "python": "Python 3.12.3"

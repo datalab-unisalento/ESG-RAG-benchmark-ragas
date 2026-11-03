@@ -1,8 +1,8 @@
 {
   "prompt_version": "qa-source-validation-v1",
-  "input_path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/testset/01_esg_testset.csv",
+  "input_path": "outputs/testset/01_esg_testset.csv",
   "input_sha256": "d56017da68dd10c962078fbe67c73f0f4748c1afbb005a8b24140b515992c03f",
-  "corpus_root": "/home/msaad/githubRepos/sesg-ragas-paper",
+  "corpus_root": ".",
   "models": [
     "gemma4:12b",
     "ministral-3:8b",

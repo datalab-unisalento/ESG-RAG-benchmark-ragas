@@ -133,13 +133,22 @@ def normalize_scores(scores, metric_names):
     return normalized
 
 
+def repo_relative(path):
+    """Store paths relative to the working directory so manifests are portable."""
+    resolved = Path(path).resolve()
+    try:
+        return str(resolved.relative_to(Path.cwd().resolve()))
+    except ValueError:
+        return str(resolved)
+
+
 def create_run_config(args, response_files):
     return {
         "judge_models": args.judges,
         "chunk_size": args.chunk_size,
         "response_files": [
             {
-                "path": str(path.resolve()),
+                "path": repo_relative(path),
                 "sha256": sha256_file(path),
                 "n_rows": len(json.loads(path.read_text(encoding="utf-8"))),
             }

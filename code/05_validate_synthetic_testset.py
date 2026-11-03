@@ -85,6 +85,15 @@ never use a value outside that range. Return only the requested structured
 result."""
 
 
+def repo_relative(path):
+    """Store paths relative to the working directory so manifests are portable."""
+    resolved = Path(path).resolve()
+    try:
+        return str(resolved.relative_to(Path.cwd().resolve()))
+    except ValueError:
+        return str(resolved)
+
+
 def parse_args():
     parser = argparse.ArgumentParser(
         description="Score synthetic QA pairs with multiple local Ollama judges."
@@ -557,9 +566,9 @@ def make_manifest(args):
     input_bytes = args.input.read_bytes()
     return {
         "prompt_version": PROMPT_VERSION,
-        "input_path": str(args.input.resolve()),
+        "input_path": repo_relative(args.input),
         "input_sha256": hashlib.sha256(input_bytes).hexdigest(),
-        "corpus_root": str(args.corpus_dir.resolve()),
+        "corpus_root": repo_relative(args.corpus_dir),
         "models": args.models,
         "ollama_url": args.ollama_url.rstrip("/"),
         "top_k": args.top_k,

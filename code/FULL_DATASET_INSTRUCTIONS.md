@@ -38,7 +38,7 @@ path = "markdown_docs_full"
 
 ### Step 1: Generate Full Document Dataset
 ```bash
-cd /home/msaad/githubRepos/sesg-ragas/code
+cd code
 python 00_select_documents.py
 ```
 

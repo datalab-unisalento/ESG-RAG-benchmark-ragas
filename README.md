@@ -90,4 +90,6 @@ If you use the data, code, or results, please cite the paper (IEEE BigData 2026,
 
 ## Licence
 
-[To be confirmed by the authors before publication.]
+- **Code** (`code/`, `README.md`, and the other scripts): MIT License, see `LICENSE`.
+- **Generated data and results** (`outputs/`, including the synthetic QA pairs, RAG responses, judge scores, timing, and logs): Creative Commons Attribution 4.0 International (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/
+- **ESG reports** (`data/documents/`): copies of publicly available company reports. Their rights remain with the respective publishers. They are provided for research reproduction only; contact the authors to request removal of any document.

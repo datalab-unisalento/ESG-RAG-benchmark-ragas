@@ -6,37 +6,37 @@
   "chunk_size": 10,
   "response_files": [
     {
-      "path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/rag_responses/rag_responses_gemma3_4b.json",
+      "path": "outputs/rag_responses/rag_responses_gemma3_4b.json",
       "sha256": "c821f1c58f6142595e71db63a33c3b7b600ca8f2617e6c4f1c83088abf31ddce",
       "n_rows": 100
     },
     {
-      "path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/rag_responses/rag_responses_gemma4_e2b.json",
+      "path": "outputs/rag_responses/rag_responses_gemma4_e2b.json",
       "sha256": "b9d3b818a90be03fbbd710b9253820aa5f413ddc5e1cc42339d7511674fa76f8",
       "n_rows": 100
     },
     {
-      "path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/rag_responses/rag_responses_gemma4_e4b.json",
+      "path": "outputs/rag_responses/rag_responses_gemma4_e4b.json",
       "sha256": "13ac56b0b9ad181bf057dcd3ee84b002c10d6f1ec735e266fae084bc9ee4633c",
       "n_rows": 100
     },
     {
-      "path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/rag_responses/rag_responses_glm-4.7-flash_q4_K_M.json",
+      "path": "outputs/rag_responses/rag_responses_glm-4.7-flash_q4_K_M.json",
       "sha256": "d3e3ea38c7432a7d4e1b126553a6f97bada6c09ff0cf17c305000869dee17bd5",
       "n_rows": 100
     },
     {
-      "path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/rag_responses/rag_responses_ministral-3_8b.json",
+      "path": "outputs/rag_responses/rag_responses_ministral-3_8b.json",
       "sha256": "3123e8ea87c3c355610a5bed8a63600c046b1f77096da85120851fd01b8a1274",
       "n_rows": 100
     },
     {
-      "path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/rag_responses/rag_responses_nemotron-3-nano_4b.json",
+      "path": "outputs/rag_responses/rag_responses_nemotron-3-nano_4b.json",
       "sha256": "84822e640e80afb749b1e879bd4691eaddf487094f1759d421bdfb5657900367",
       "n_rows": 100
     },
     {
-      "path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/rag_responses/rag_responses_qwen3_4b-instruct.json",
+      "path": "outputs/rag_responses/rag_responses_qwen3_4b-instruct.json",
       "sha256": "daf0b6cb2ca07dc60861e7ffc10947d9a402d8533d9434797a9ddf3b0315da68",
       "n_rows": 100
     }

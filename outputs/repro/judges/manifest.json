@@ -7,27 +7,27 @@
   "chunk_size": 10,
   "response_files": [
     {
-      "path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/repro/rag_responses/rag_responses_gemma3_4b.json",
+      "path": "outputs/repro/rag_responses/rag_responses_gemma3_4b.json",
       "sha256": "62688fad2e5edafc81460e9cd3ef85215cd7f6ab0b6c229db31c7fac07a04d6a",
       "n_rows": 100
     },
     {
-      "path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/repro/rag_responses/rag_responses_glm-4.7-flash_q4_K_M.json",
+      "path": "outputs/repro/rag_responses/rag_responses_glm-4.7-flash_q4_K_M.json",
       "sha256": "47c08bcefb37043f93c57aabf36da2e9366e41e383b68f53de7c0cf1f7613347",
       "n_rows": 100
     },
     {
-      "path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/repro/rag_responses/rag_responses_ministral-3_8b.json",
+      "path": "outputs/repro/rag_responses/rag_responses_ministral-3_8b.json",
       "sha256": "5dd6da7bd3d5ce56ff44ab24ae407dd4dd52f241fbc82e0ddef9908617ae4134",
       "n_rows": 100
     },
     {
-      "path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/repro/rag_responses/rag_responses_nemotron-3-nano_4b.json",
+      "path": "outputs/repro/rag_responses/rag_responses_nemotron-3-nano_4b.json",
       "sha256": "5438c70c8f94a1376e2ab92ed45c8adc03828c3fadb7a368a96872ce72a6b0a4",
       "n_rows": 100
     },
     {
-      "path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/repro/rag_responses/rag_responses_qwen3_4b-instruct.json",
+      "path": "outputs/repro/rag_responses/rag_responses_qwen3_4b-instruct.json",
       "sha256": "9ebfd786df79b296fdb7be80716b90d2954c885d2412be3181609675549a60a8",
       "n_rows": 100
     }
