@@ -1,0 +1,34 @@
+{
+  "judge_model": "nemotron-3.5-lightning:30b",
+  "n_rag_models": 7,
+  "results": [
+    {
+      "Model": "gemma3_4b",
+      "factual_correctness": 0.40850000000000003
+    },
+    {
+      "Model": "gemma4_e2b",
+      "factual_correctness": 0.3862
+    },
+    {
+      "Model": "gemma4_e4b",
+      "factual_correctness": 0.3892929292929293
+    },
+    {
+      "Model": "glm-4.7-flash_q4_K_M",
+      "factual_correctness": 0.41122448979591836
+    },
+    {
+      "Model": "ministral-3_8b",
+      "factual_correctness": 0.3030612244897959
+    },
+    {
+      "Model": "nemotron-3-nano_4b",
+      "factual_correctness": 0.4213131313131313
+    },
+    {
+      "Model": "qwen3_4b-instruct",
+      "factual_correctness": 0.3958333333333333
+    }
+  ]
+}

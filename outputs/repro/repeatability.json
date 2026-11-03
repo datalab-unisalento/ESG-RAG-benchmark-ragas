@@ -1,0 +1,296 @@
+{
+  "run_a": "outputs/repro/judges/qwen3_4b-instruct",
+  "run_b": "outputs/repro/judges_repeat/qwen3_4b-instruct",
+  "results": {
+    "gemma3_4b": {
+      "llm_context_precision_with_reference": {
+        "paired_items": 77,
+        "exact_matches": 77,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 20,
+        "missing_b": 23
+      },
+      "context_precision": {
+        "paired_items": 77,
+        "exact_matches": 77,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 22,
+        "missing_b": 23
+      },
+      "context_recall": {
+        "paired_items": 27,
+        "exact_matches": 26,
+        "max_abs_diff": 0.5,
+        "mean_abs_diff": 0.018518518518518517,
+        "missing_a": 71,
+        "missing_b": 54
+      },
+      "context_relevance": {
+        "paired_items": 100,
+        "exact_matches": 100,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 0,
+        "missing_b": 0
+      },
+      "faithfulness": {
+        "paired_items": 96,
+        "exact_matches": 72,
+        "max_abs_diff": 1.0,
+        "mean_abs_diff": 0.07413194444444444,
+        "missing_a": 4,
+        "missing_b": 1
+      },
+      "factual_correctness": {
+        "paired_items": 93,
+        "exact_matches": 66,
+        "max_abs_diff": 0.4,
+        "mean_abs_diff": 0.03612903225806451,
+        "missing_a": 5,
+        "missing_b": 4
+      },
+      "answer_relevancy": {
+        "paired_items": 100,
+        "exact_matches": 76,
+        "max_abs_diff": 0.29982915251421494,
+        "mean_abs_diff": 0.006938417850828636,
+        "missing_a": 0,
+        "missing_b": 0
+      }
+    },
+    "glm-4.7-flash_q4_K_M": {
+      "llm_context_precision_with_reference": {
+        "paired_items": 76,
+        "exact_matches": 76,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 24,
+        "missing_b": 24
+      },
+      "context_precision": {
+        "paired_items": 77,
+        "exact_matches": 77,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 23,
+        "missing_b": 23
+      },
+      "context_recall": {
+        "paired_items": 26,
+        "exact_matches": 25,
+        "max_abs_diff": 0.3333333333333333,
+        "mean_abs_diff": 0.01282051282051282,
+        "missing_a": 73,
+        "missing_b": 54
+      },
+      "context_relevance": {
+        "paired_items": 100,
+        "exact_matches": 100,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 0,
+        "missing_b": 0
+      },
+      "faithfulness": {
+        "paired_items": 77,
+        "exact_matches": 65,
+        "max_abs_diff": 0.8,
+        "mean_abs_diff": 0.05542671614100186,
+        "missing_a": 23,
+        "missing_b": 22
+      },
+      "factual_correctness": {
+        "paired_items": 94,
+        "exact_matches": 74,
+        "max_abs_diff": 0.5,
+        "mean_abs_diff": 0.04382978723404255,
+        "missing_a": 4,
+        "missing_b": 4
+      },
+      "answer_relevancy": {
+        "paired_items": 100,
+        "exact_matches": 85,
+        "max_abs_diff": 0.09135133151373054,
+        "mean_abs_diff": 0.00230155861601396,
+        "missing_a": 0,
+        "missing_b": 0
+      }
+    },
+    "ministral-3_8b": {
+      "llm_context_precision_with_reference": {
+        "paired_items": 76,
+        "exact_matches": 76,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 24,
+        "missing_b": 24
+      },
+      "context_precision": {
+        "paired_items": 77,
+        "exact_matches": 77,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 23,
+        "missing_b": 23
+      },
+      "context_recall": {
+        "paired_items": 26,
+        "exact_matches": 25,
+        "max_abs_diff": 0.3333333333333333,
+        "mean_abs_diff": 0.01282051282051282,
+        "missing_a": 73,
+        "missing_b": 54
+      },
+      "context_relevance": {
+        "paired_items": 100,
+        "exact_matches": 100,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 0,
+        "missing_b": 0
+      },
+      "faithfulness": {
+        "paired_items": 96,
+        "exact_matches": 69,
+        "max_abs_diff": 0.7142857142857143,
+        "mean_abs_diff": 0.04440850127494397,
+        "missing_a": 3,
+        "missing_b": 4
+      },
+      "factual_correctness": {
+        "paired_items": 89,
+        "exact_matches": 49,
+        "max_abs_diff": 0.5700000000000001,
+        "mean_abs_diff": 0.06303370786516854,
+        "missing_a": 5,
+        "missing_b": 10
+      },
+      "answer_relevancy": {
+        "paired_items": 100,
+        "exact_matches": 74,
+        "max_abs_diff": 0.9439106996737557,
+        "mean_abs_diff": 0.012272769750760314,
+        "missing_a": 0,
+        "missing_b": 0
+      }
+    },
+    "nemotron-3-nano_4b": {
+      "llm_context_precision_with_reference": {
+        "paired_items": 76,
+        "exact_matches": 76,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 24,
+        "missing_b": 24
+      },
+      "context_precision": {
+        "paired_items": 77,
+        "exact_matches": 77,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 23,
+        "missing_b": 23
+      },
+      "context_recall": {
+        "paired_items": 26,
+        "exact_matches": 25,
+        "max_abs_diff": 0.3333333333333333,
+        "mean_abs_diff": 0.01282051282051282,
+        "missing_a": 73,
+        "missing_b": 54
+      },
+      "context_relevance": {
+        "paired_items": 100,
+        "exact_matches": 100,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 0,
+        "missing_b": 0
+      },
+      "faithfulness": {
+        "paired_items": 97,
+        "exact_matches": 83,
+        "max_abs_diff": 1.0,
+        "mean_abs_diff": 0.04419489445262641,
+        "missing_a": 2,
+        "missing_b": 2
+      },
+      "factual_correctness": {
+        "paired_items": 91,
+        "exact_matches": 63,
+        "max_abs_diff": 0.4,
+        "mean_abs_diff": 0.04417582417582417,
+        "missing_a": 6,
+        "missing_b": 8
+      },
+      "answer_relevancy": {
+        "paired_items": 100,
+        "exact_matches": 77,
+        "max_abs_diff": 0.12978458324156827,
+        "mean_abs_diff": 0.007245984477585328,
+        "missing_a": 0,
+        "missing_b": 0
+      }
+    },
+    "qwen3_4b-instruct": {
+      "llm_context_precision_with_reference": {
+        "paired_items": 76,
+        "exact_matches": 76,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 24,
+        "missing_b": 24
+      },
+      "context_precision": {
+        "paired_items": 77,
+        "exact_matches": 77,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 23,
+        "missing_b": 23
+      },
+      "context_recall": {
+        "paired_items": 26,
+        "exact_matches": 25,
+        "max_abs_diff": 0.3333333333333333,
+        "mean_abs_diff": 0.01282051282051282,
+        "missing_a": 73,
+        "missing_b": 54
+      },
+      "context_relevance": {
+        "paired_items": 100,
+        "exact_matches": 100,
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "missing_a": 0,
+        "missing_b": 0
+      },
+      "faithfulness": {
+        "paired_items": 98,
+        "exact_matches": 75,
+        "max_abs_diff": 0.5,
+        "mean_abs_diff": 0.03753340808254879,
+        "missing_a": 1,
+        "missing_b": 1
+      },
+      "factual_correctness": {
+        "paired_items": 91,
+        "exact_matches": 54,
+        "max_abs_diff": 0.25,
+        "mean_abs_diff": 0.04153846153846154,
+        "missing_a": 8,
+        "missing_b": 5
+      },
+      "answer_relevancy": {
+        "paired_items": 99,
+        "exact_matches": 80,
+        "max_abs_diff": 0.1003227941717656,
+        "mean_abs_diff": 0.005670861715150207,
+        "missing_a": 1,
+        "missing_b": 1
+      }
+    }
+  }
+}

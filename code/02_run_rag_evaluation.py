@@ -1,5 +1,13 @@
 
 # %%
+import sys
+# Compatibility: newer langchain-community moved ChatVertexAI to langchain-google-vertexai
+try:
+    from langchain_community.chat_models.vertexai import ChatVertexAI
+except ModuleNotFoundError:
+    import langchain_google_vertexai
+    sys.modules["langchain_community.chat_models.vertexai"] = langchain_google_vertexai
+
 from langchain_ollama import OllamaEmbeddings
 from langchain_ollama import ChatOllama
 import numpy as np
@@ -25,13 +33,21 @@ print(f"Loading embeddings from {EMBEDDINGS_PATH}...")
 doc_embeddings = np.load(EMBEDDINGS_PATH).tolist()
 print(f"Loaded {len(doc_embeddings)} embeddings")
 
-models = [
+import os
+
+ALL_MODELS = [
     "qwen3:4b-instruct",
     "gemma3:4b",
+    "gemma4:e2b",
+    "gemma4:e4b",
     "ministral-3:8b",
     "nemotron-3-nano:4b",
     "glm-4.7-flash:q4_K_M",
 ]
+
+filter_env = os.environ.get("EVAL_MODELS", "")
+models = [m.strip() for m in filter_env.split(",") if m.strip()] if filter_env else ALL_MODELS
+print(f"Models to evaluate: {models}")
 
 
 def get_most_relevant_doc(query):

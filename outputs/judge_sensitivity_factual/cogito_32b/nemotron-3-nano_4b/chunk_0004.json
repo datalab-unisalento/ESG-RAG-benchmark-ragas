@@ -1,0 +1,38 @@
+{
+  "judge_model": "cogito:32b",
+  "rag_model": "nemotron-3-nano_4b",
+  "start_row": 41,
+  "end_row": 50,
+  "scores": [
+    {
+      "factual_correctness": 0.82
+    },
+    {
+      "factual_correctness": 0.8
+    },
+    {
+      "factual_correctness": 0.76
+    },
+    {
+      "factual_correctness": 0.0
+    },
+    {
+      "factual_correctness": 1.0
+    },
+    {
+      "factual_correctness": 0.42
+    },
+    {
+      "factual_correctness": 1.0
+    },
+    {
+      "factual_correctness": 0.2
+    },
+    {
+      "factual_correctness": 0.0
+    },
+    {
+      "factual_correctness": 0.6
+    }
+  ]
+}

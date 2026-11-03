@@ -1,0 +1,88 @@
+{
+  "seed": 42,
+  "metric": "factual_correctness",
+  "judges": {
+    "qwen3": {
+      "means": {
+        "gemma3_4b": 0.40442105263157896,
+        "glm-4.7-flash_q4_K_M": 0.35125,
+        "ministral-3_8b": 0.3868421052631579,
+        "nemotron-3-nano_4b": 0.42989361702127665,
+        "qwen3_4b-instruct": 0.4028260869565218
+      },
+      "missing": {
+        "gemma3_4b": 5,
+        "glm-4.7-flash_q4_K_M": 4,
+        "ministral-3_8b": 5,
+        "nemotron-3-nano_4b": 6,
+        "qwen3_4b-instruct": 8
+      }
+    },
+    "nemotron": {
+      "means": {
+        "gemma3_4b": 0.41578947368421054,
+        "glm-4.7-flash_q4_K_M": 0.3391,
+        "ministral-3_8b": 0.3392307692307692,
+        "nemotron-3-nano_4b": 0.43905263157894736,
+        "qwen3_4b-instruct": 0.40568421052631576
+      },
+      "missing": {
+        "gemma3_4b": 5,
+        "glm-4.7-flash_q4_K_M": 0,
+        "ministral-3_8b": 9,
+        "nemotron-3-nano_4b": 5,
+        "qwen3_4b-instruct": 5
+      }
+    },
+    "cogito": {
+      "means": {
+        "gemma3_4b": 0.48869999999999997,
+        "glm-4.7-flash_q4_K_M": 0.4292,
+        "ministral-3_8b": 0.4355,
+        "nemotron-3-nano_4b": 0.5338,
+        "qwen3_4b-instruct": 0.49369999999999997
+      },
+      "missing": {
+        "gemma3_4b": 0,
+        "glm-4.7-flash_q4_K_M": 0,
+        "ministral-3_8b": 0,
+        "nemotron-3-nano_4b": 0,
+        "qwen3_4b-instruct": 0
+      }
+    }
+  },
+  "spearman_over_5_models": {
+    "qwen3_vs_nemotron": 0.9999999999999998,
+    "qwen3_vs_cogito": 0.8999999999999998,
+    "nemotron_vs_cogito": 0.8999999999999998
+  },
+  "pairwise": {
+    "qwen3: qwen3 minus gemma3": {
+      "diff": -0.00034090909090908996,
+      "ci95": [
+        -0.06068181818181818,
+        0.05784090909090909
+      ],
+      "p_gt_0": 0.4926,
+      "n_paired": 88
+    },
+    "nemotron: qwen3 minus gemma3": {
+      "diff": 0.002,
+      "ci95": [
+        -0.06322222222222222,
+        0.06644444444444444
+      ],
+      "p_gt_0": 0.5276,
+      "n_paired": 90
+    },
+    "cogito: qwen3 minus gemma3": {
+      "diff": 0.005000000000000004,
+      "ci95": [
+        -0.0496,
+        0.058600000000000006
+      ],
+      "p_gt_0": 0.5664,
+      "n_paired": 100
+    }
+  }
+}

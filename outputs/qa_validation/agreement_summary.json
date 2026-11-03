@@ -1,0 +1,151 @@
+{
+  "manifest": {
+    "prompt_version": "qa-source-validation-v1",
+    "input_path": "/home/msaad/githubRepos/sesg-ragas-paper/outputs/testset/01_esg_testset.csv",
+    "input_sha256": "d56017da68dd10c962078fbe67c73f0f4748c1afbb005a8b24140b515992c03f",
+    "corpus_root": "/home/msaad/githubRepos/sesg-ragas-paper",
+    "models": [
+      "gemma4:12b",
+      "ministral-3:8b",
+      "nemotron-3.5-lightning:30b"
+    ],
+    "ollama_url": "http://localhost:11434",
+    "top_k": 3,
+    "chunk_size": 1000,
+    "overlap": 200,
+    "num_ctx": 8192,
+    "num_predict": 700,
+    "limit": null,
+    "evidence_method": "BM25 lexical ranking over source-report chunks; candidate chunks are approximate"
+  },
+  "n_qa_pairs": 282,
+  "n_completed_judgments": 846,
+  "answer_verdict_agreement": {
+    "n_items": 282,
+    "unanimous_agreement": 0.62766,
+    "mean_pairwise_agreement": 0.724586,
+    "fleiss_kappa": 0.250011,
+    "pairwise_agreement": {
+      "gemma4:12b | ministral-3:8b": 0.659574,
+      "gemma4:12b | nemotron-3.5-lightning:30b": 0.804965,
+      "ministral-3:8b | nemotron-3.5-lightning:30b": 0.70922
+    },
+    "label_counts_by_judge": {
+      "gemma4:12b": {
+        "supported": 246,
+        "partially_supported": 2,
+        "unsupported": 7,
+        "contradicted": 19,
+        "not_assessable": 8
+      },
+      "ministral-3:8b": {
+        "supported": 179,
+        "partially_supported": 0,
+        "unsupported": 42,
+        "contradicted": 33,
+        "not_assessable": 28
+      },
+      "nemotron-3.5-lightning:30b": {
+        "supported": 240,
+        "partially_supported": 1,
+        "unsupported": 18,
+        "contradicted": 2,
+        "not_assessable": 21
+      }
+    }
+  },
+  "question_answerability_agreement": {
+    "n_items": 282,
+    "unanimous_agreement": 0.489362,
+    "mean_pairwise_agreement": 0.619385,
+    "fleiss_kappa": 0.088746,
+    "pairwise_agreement": {
+      "gemma4:12b | ministral-3:8b": 0.556738,
+      "gemma4:12b | nemotron-3.5-lightning:30b": 0.705674,
+      "ministral-3:8b | nemotron-3.5-lightning:30b": 0.595745
+    },
+    "label_counts_by_judge": {
+      "gemma4:12b": {
+        "answerable": 270,
+        "partially_answerable": 0,
+        "unanswerable": 0,
+        "not_assessable": 12
+      },
+      "ministral-3:8b": {
+        "answerable": 153,
+        "partially_answerable": 8,
+        "unanswerable": 0,
+        "not_assessable": 121
+      },
+      "nemotron-3.5-lightning:30b": {
+        "answerable": 199,
+        "partially_answerable": 55,
+        "unanswerable": 0,
+        "not_assessable": 28
+      }
+    }
+  },
+  "question_quality_agreement": {
+    "n_items": 282,
+    "unanimous_agreement": 0.904255,
+    "mean_pairwise_agreement": 0.93617,
+    "fleiss_kappa": -0.032967,
+    "pairwise_agreement": {
+      "gemma4:12b | ministral-3:8b": 1.0,
+      "gemma4:12b | nemotron-3.5-lightning:30b": 0.904255,
+      "ministral-3:8b | nemotron-3.5-lightning:30b": 0.904255
+    },
+    "label_counts_by_judge": {
+      "gemma4:12b": {
+        "clear": 282,
+        "ambiguous": 0,
+        "compound": 0,
+        "not_assessable": 0
+      },
+      "ministral-3:8b": {
+        "clear": 282,
+        "ambiguous": 0,
+        "compound": 0,
+        "not_assessable": 0
+      },
+      "nemotron-3.5-lightning:30b": {
+        "clear": 255,
+        "ambiguous": 27,
+        "compound": 0,
+        "not_assessable": 0
+      }
+    }
+  },
+  "reference_completeness_agreement": {
+    "n_items": 282,
+    "unanimous_agreement": 0.315603,
+    "mean_pairwise_agreement": 0.5,
+    "fleiss_kappa": 0.027914,
+    "pairwise_agreement": {
+      "gemma4:12b | ministral-3:8b": 0.326241,
+      "gemma4:12b | nemotron-3.5-lightning:30b": 0.797872,
+      "ministral-3:8b | nemotron-3.5-lightning:30b": 0.375887
+    },
+    "label_counts_by_judge": {
+      "gemma4:12b": {
+        "complete": 241,
+        "partially_complete": 0,
+        "incomplete": 33,
+        "not_assessable": 8
+      },
+      "ministral-3:8b": {
+        "complete": 90,
+        "partially_complete": 89,
+        "incomplete": 1,
+        "not_assessable": 102
+      },
+      "nemotron-3.5-lightning:30b": {
+        "complete": 233,
+        "partially_complete": 8,
+        "incomplete": 20,
+        "not_assessable": 21
+      }
+    }
+  },
+  "interpretation_note": "Agreement is inter-model consistency, not human-verified accuracy. Candidate excerpts are lexically retrieved from the cited source report and are not guaranteed to be the original generation chunk."
+}

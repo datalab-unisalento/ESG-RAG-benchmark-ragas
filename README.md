@@ -1,191 +1,93 @@
-# SESG RAGAS Project
+# ESG-RAG benchmark (RAGAS)
 
-This project uses RAGAS (Retrieval-Augmented Generation Assessment) to evaluate RAG systems on Environmental, Social, and Governance (ESG) documents.
+Code, data, and results for **"Empirical Evaluation of Open-Source Large Language Models for Retrieval-Augmented Generation in ESG Domain"** (IEEE BigData 2026, paper BigD275).
 
-## Overview
+The repository evaluates five open-source generators in one shared RAG pipeline over 498 ESG reports. It scores each answer with seven RAGAS metrics and three LLM judges, under fixed decoding settings.
 
-The project consists of four main steps:
-1. **Data Generation** (`01_generate_testset.py`) - Generates test questions from ESG documents
-2. **Embedding Computation** (`02a_compute_embeddings.py`) - Embeds all corpus chunks once and saves to disk (run once after step 1)
-3. **RAG Evaluation** (`02_run_rag_evaluation.py`) - Runs RAG across 5 LLMs, loading embeddings from file
-4. **Analysis** (`03_analyze_results.py`) - Evaluates RAG responses using RAGAS metrics
+Public repository: https://github.com/datalab-unisalento/ESG-RAG-benchmark-ragas
 
-## Setup
+## What is here
 
-### Prerequisites
-- Python 3.8+
-- Ollama installed and running
-- Required Ollama models:
-  - `qwen3:4b-instruct` (for generation/evaluation)
-  - `qwen3-embedding:4b` (for embeddings)
-  - Various small models for testing (see `02_run_rag_evaluation.py`)
+| Path | Contents |
+|---|---|
+| `data/documents/` | 498 ESG reports, converted to Markdown |
+| `outputs/testset/` | Synthetic QA set: 284 pairs from 181 reports (`01_esg_testset.csv`, `.json`) |
+| `outputs/repro/` | **Controlled rerun** (the results in the paper): responses, judge scores, timing, QA check, environment record, logs |
+| `outputs/evaluation/`, `outputs/100/`, `outputs/judge_sensitivity*/` | Earlier runs, kept for the audit trail |
+| `outputs/qa_validation*/` | QA consistency checks (282-pair run and 284-pair run) |
+| `outputs/benchmark*/` | Token and latency measurements |
+| `code/` | All scripts; see below |
+| `code/run_reproduction.sh` | Runs the controlled rerun stage by stage, resumable |
 
-### Installation
+## Controlled settings (used for all reported results)
 
-1. Create and activate virtual environment:
+- **Generation:** temperature 0, seed 42, 8,192-token context, 1,024 output tokens, for every model.
+- **Retrieval:** top-one chunk by cosine similarity, frozen from the original retrieval run, identical for all models and checked against the testset questions.
+- **Judging:** RAGAS 0.4.3 with three judges (qwen3:4b-instruct as main judge; nemotron-3.5-lightning:30b and cogito:32b as independent judges), temperature 0, seed 42, 8,192-token context.
+- **Models:** glm-4.7-flash (q4_K_M, 29.9B mixture-of-experts), ministral-3:8b, gemma3:4b, qwen3:4b-instruct, nemotron-3-nano:4b.
+
+The exact package versions, GPU, and Ollama model digests are recorded in `outputs/repro/environment.json`, `outputs/repro/pip_freeze.txt`, and `outputs/repro/ollama_models.txt`. `requirements.txt` lists the packages without pins; use `pip_freeze.txt` for the exact versions.
+
+## Reproducing the results
+
+Requirements: Python 3.12, [Ollama](https://ollama.com) running locally, and a GPU with about 48 GB of memory.
+
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+ollama pull qwen3:4b-instruct qwen3-embedding:4b gemma3:4b glm-4.7-flash:q4_K_M \
+            nemotron-3-nano:4b ministral-3:8b nemotron-3.5-lightning:30b cogito:32b gemma4:12b
+bash code/run_reproduction.sh
 ```
 
-2. Install dependencies:
+`run_reproduction.sh` runs five stages: environment record, RAG generation, judging (all seven metrics, three judges), token and latency timing, and the QA consistency check. Each stage resumes from its own manifest, so an interrupted run continues where it stopped. Logs are written to `outputs/repro/logs/`.
+
+Run it detached if you need to disconnect:
+
 ```bash
-pip install -r requirements.txt
+setsid nohup bash code/run_reproduction.sh > outputs/repro/driver.log 2>&1 < /dev/null &
 ```
 
-3. Pull required Ollama models:
-```bash
-ollama pull qwen3:4b-instruct
-ollama pull qwen3-embedding:4b
-```
+Stage durations depend on the hardware. The logs in `outputs/repro/logs/` record the durations on our workstation.
 
-## Usage
+## Scripts
 
-### 1. Generate Test Data
-```bash
-python code/01_generate_testset.py
-```
-Creates:
-- `outputs/01_esg_testset/01_esg_knowledge_graph.pkl` - Knowledge graph
-- `outputs/01_esg_testset/01_esg_testset.csv` - Test questions and references
+| Script | Purpose |
+|---|---|
+| `code/02_run_rag_generation.py` | Generation with frozen retrieval and fixed decoding (resumable) |
+| `code/04_compare_ragas_judges.py` | RAGAS scoring by one or more judges, all seven metrics (resumable) |
+| `code/05_validate_synthetic_testset.py` | Consistency check of the synthetic QA references (resumable) |
+| `code/06_benchmark_tokens_latency.py` | Token and latency measurement, one model loaded at a time (resumable) |
+| `code/07_ragas_version_check.py` | Check that the installed RAGAS version reproduces saved scores |
+| `code/08_summarize_repro.py` | Judge agreement and paired bootstrap intervals (seed 42) |
+| `code/09_judge_repeatability.py` | Compare two scorings of the same responses by the same judge |
+| `code/00_select_documents.py`, `code/01_generate_testset.py` | Document selection and synthetic QA generation (historical; see notes) |
 
-### 2a. Compute Embeddings (once)
-```bash
-python code/02a_compute_embeddings.py
-# or via runner:
-bash run_experiment.sh step2a
-```
-Embeds all corpus chunks with `qwen3-embedding:4b` and saves to `outputs/01_esg_testset/doc_embeddings.npy`. Run once — step 2 loads from this file on every run.
+## Metrics
 
-### 2. Run RAG Evaluation
-```bash
-python code/02_run_rag_evaluation.py
-# or via runner:
-bash run_experiment.sh step2
-```
-Loads pre-computed embeddings, runs RAG across 5 models, saves responses to `outputs/02_rag_responses/`.
+Seven RAGAS metrics: context precision (with and without reference), context recall, context relevance, faithfulness, answer relevancy, and factual correctness (F1). Formulas are in Section III-E of the paper.
 
-### 3. Evaluate Performance
-```bash
-python code/03_analyze_results.py
-# or via runner:
-bash run_experiment.sh step3
-```
-Evaluates RAG responses using RAGAS metrics, saves results to `outputs/03_evaluation_results/`.
+## Main findings
 
-## Project Structure
+- Faithfulness: glm-4.7-flash is the most faithful model under all three judges; ministral-3 is the least faithful under all three.
+- Answer relevancy: glm-4.7-flash is the least answer-relevant under all three judges.
+- Factual correctness: nemotron-3-nano ranks first under all three judges, but the margin over other models is not significant. The earlier qwen3 lead does not reproduce under the controlled settings.
+- Retrieval scores depend on the judge, and context recall is undefined for most items, so the paper draws no retrieval ranking.
+- Repeatability: rescoring with the same settings reproduced 87% of judge-based scores exactly; model means moved by at most 0.03.
 
-```
-sesg-ragas/
-├── code/
-│   ├── 00_select_documents.py    # Document selection
-│   ├── 01_generate_testset.py    # Test data generation
-│   ├── 02a_compute_embeddings.py # Embedding computation (run once)
-│   ├── 02_run_rag_evaluation.py  # RAG evaluation across models
-│   └── 03_analyze_results.py     # Evaluation
-├── data/                  # ESG document corpus
-│   ├── raw/               # Source ESG documents (498 documents)
-│   └── documents/         # Selected documents (copied by 00_select_documents.py)
-├── outputs/               # All generated files
-│   ├── 01_esg_knowledge_graph.pkl  # Knowledge graph
-│   ├── 01_esg_testset.csv          # Test questions
-│   ├── 02_rag_responses/          # RAG responses for each model
-│   └── 03_evaluation_results/     # Evaluation results for each model
-├── requirements.txt        # Python dependencies
-├── .gitignore            # Git ignore file
-└── README.md             # This file
-```
+## Notes and limitations
 
-## Evaluation Metrics
+- Synthetic QA references are checked only by LLM judges. No human verified them.
+- The main judge (qwen3) also generated the questions. Two independent judges test this risk, but cannot fully separate judge capability from self-preference.
+- The evaluation uses a 100-item prefix, not a random sample.
+- The retrieval index (embeddings for all 258,590 chunks) is not included, so the retrieval step cannot be rebuilt from scratch. The frozen retrieved contexts are included in `outputs/rag_responses/` and `outputs/repro/rag_responses/`.
+- The earlier runs in `outputs/evaluation/` and `outputs/100/` used the models' default decoding and an earlier RAGAS setup. They are kept for the audit trail and are not the reported results.
+- The synthetic QA set was regenerated once. `outputs/testset/01_esg_testset.csv` is the 284-pair version used by the paper. A 282-pair version from the later regeneration is in the git history.
 
-The project uses the following RAGAS metrics:
-- **Context Precision** - Relevance of retrieved context
-- **Context Recall** - Completeness of retrieved context
-- **Context Relevance** - How well context matches the query
-- **Faithfulness** - Factual consistency of the answer
-- **Factual Correctness** - Accuracy of the answer
-- **Answer Relevancy** - How well the answer addresses the query
+## Citation
 
-## Experimental Design
+If you use the data, code, or results, please cite the paper (IEEE BigData 2026, paper BigD275). A BibTeX entry will be added after publication.
 
-### Document Dataset
-- **Dataset Size**: 100 ESG documents selected from the full corpus of 498 documents
-- **Selection Strategy**: Representative sampling across years (2010-2024) and ESG topics (Environmental, Social, Governance)
-- **Purpose**: Statistically significant evaluation while maintaining computational feasibility
+## Licence
 
-### Model Selection Strategy
-
-#### Size Range Justification
-**Focus Range**: 4B-14B parameter models
-
-**Selection Criteria:**
-- **Practical Relevance**: 4B-14B range represents the sweet spot for real-world applications balancing performance and computational efficiency
-- **Computational Feasibility**: Models in this range can be evaluated within reasonable timeframes for academic research
-- **Research Impact**: Provides meaningful insights into size scaling without prohibitive resource requirements
-- **Reproducibility**: Selected sizes are accessible to most research institutions for validation
-
-#### Model Families Evaluated
-
-**Final Model Selection** (5 models - one per family)
-
-**Qwen Series** (1 model - Balanced Representative)
-- qwen3:4b-instruct
-- **Rationale**: 4B parameter model provides optimal balance of performance and efficiency from Alibaba's comprehensive family
-
-**Gemma Series** (1 model - Google Latest Generation)
-- gemma3:4b
-- **Rationale**: Google's latest generation 4B model representing cutting-edge architecture from major tech company
-
-**Ministral Series** (1 model - European Representative)
-- ministral-3:8b
-- **Rationale**: 8B parameter model from leading European AI company, representing larger model performance
-
-**Nemotron Series** (1 model - NVIDIA Enterprise)
-- nemotron-3-nano:4b
-- **Rationale**: NVIDIA's optimized 4B model for enterprise applications with strong engineering focus
-
-**GLM Series** (1 model - Quantized Efficiency)
-- glm-4.7-flash:q4_K_M
-- **Rationale**: Quantized 4B model representing efficiency-focused approaches from Zhipu AI
-
-**Selection Strategy:**
-- **Final Implementation**: 5 models across 5 families for comprehensive evaluation
-- **Size Range**: 4B-8B parameters covering practical deployment scenarios
-- **Family Diversity**: Each model represents a major AI research organization/geographic region
-- **Evaluation Time**: ~9.5 hours total for complete 498-document evaluation
-- **Maintains**: Architectural diversity while ensuring computational feasibility
-
-#### Research Design Benefits
-
-**Size Range Evaluated**:
-- 4B parameters: qwen3:4b-instruct, gemma3:4b, nemotron-3-nano:4b, glm-4.7-flash:q4_K_M (quantized)
-- 8B parameters: ministral-3:8b
-
-**Family Comparison**:
-- **Architectural Diversity**: Different training methodologies and model architectures
-- **Geographic Diversity**: Models from US, Europe, and China
-- **Training Paradigms**: Various approaches to LLM development
-
-**Sample Size**:
-- **5 models** across **5 families** for cross-family comparison
-- **100 synthetic QA pairs** (Environmental: 97 / Social: 94 / Governance: 93 in the 284-pair generation pool; first 100 used for evaluation)
-- **500 model-query evaluations** in total
-
-**Computational Footprint**:
-- **Total evaluation time**: ~9.5 hours for the full 498-document setup across all 5 models
-- **Resource requirements**: Manageable for academic research settings (RTX 6000 Ada, 48 GB VRAM)
-
-**Total Models**: 5 open-source models across 5 families.
-
-## Output Files
-
-- `outputs/01_esg_knowledge_graph.pkl` - Knowledge graph of ESG documents
-- `outputs/01_esg_testset.csv` - Generated test questions and references
-- `outputs/02_rag_responses/` - RAG responses for each model
-- `outputs/03_evaluation_results/` - Evaluation results for each model
-
-## Notes
-
-- Ensure Ollama is running before executing the scripts
-- The evaluation process can be time-consuming due to multiple models
-- Results are saved in JSON format for further analysis
+[To be confirmed by the authors before publication.]

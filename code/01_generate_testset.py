@@ -1,4 +1,12 @@
 # %%
+import sys
+# Compatibility: newer langchain-community moved ChatVertexAI to langchain-google-vertexai
+try:
+    from langchain_community.chat_models.vertexai import ChatVertexAI
+except ModuleNotFoundError:
+    import langchain_google_vertexai
+    sys.modules["langchain_community.chat_models.vertexai"] = langchain_google_vertexai
+
 from langchain_community.document_loaders import DirectoryLoader
 from langchain_ollama import OllamaEmbeddings
 from langchain_ollama import ChatOllama

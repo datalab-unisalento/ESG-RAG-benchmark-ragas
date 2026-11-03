@@ -1,0 +1,38 @@
+{
+  "judge_model": "cogito:32b",
+  "rag_model": "qwen3_4b-instruct",
+  "start_row": 11,
+  "end_row": 20,
+  "scores": [
+    {
+      "factual_correctness": 0.53
+    },
+    {
+      "factual_correctness": 0.78
+    },
+    {
+      "factual_correctness": 0.4
+    },
+    {
+      "factual_correctness": 0.84
+    },
+    {
+      "factual_correctness": 0.0
+    },
+    {
+      "factual_correctness": 0.82
+    },
+    {
+      "factual_correctness": 0.67
+    },
+    {
+      "factual_correctness": 0.5
+    },
+    {
+      "factual_correctness": 0.2
+    },
+    {
+      "factual_correctness": 0.59
+    }
+  ]
+}

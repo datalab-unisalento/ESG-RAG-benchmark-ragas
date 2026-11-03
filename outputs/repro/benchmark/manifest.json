@@ -1,0 +1,17 @@
+{
+  "rag_dir": "outputs/repro/rag_responses",
+  "n": 50,
+  "generation_options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "models": {
+    "gemma3_4b": "gemma3:4b",
+    "glm-4.7-flash_q4_K_M": "glm-4.7-flash:q4_K_M",
+    "ministral-3_8b": "ministral-3:8b",
+    "nemotron-3-nano_4b": "nemotron-3-nano:4b",
+    "qwen3_4b-instruct": "qwen3:4b-instruct"
+  }
+}

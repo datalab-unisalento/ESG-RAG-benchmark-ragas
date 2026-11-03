@@ -1,0 +1,38 @@
+{
+  "judge_model": "cogito:32b",
+  "rag_model": "ministral-3_8b",
+  "start_row": 71,
+  "end_row": 80,
+  "scores": [
+    {
+      "factual_correctness": 0.57
+    },
+    {
+      "factual_correctness": 0.0
+    },
+    {
+      "factual_correctness": 0.81
+    },
+    {
+      "factual_correctness": 1.0
+    },
+    {
+      "factual_correctness": 0.28
+    },
+    {
+      "factual_correctness": 0.63
+    },
+    {
+      "factual_correctness": 0.38
+    },
+    {
+      "factual_correctness": 0.44
+    },
+    {
+      "factual_correctness": 0.42
+    },
+    {
+      "factual_correctness": 0.0
+    }
+  ]
+}

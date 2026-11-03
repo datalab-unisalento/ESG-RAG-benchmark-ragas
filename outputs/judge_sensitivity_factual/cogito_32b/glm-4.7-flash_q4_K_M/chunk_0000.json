@@ -1,0 +1,38 @@
+{
+  "judge_model": "cogito:32b",
+  "rag_model": "glm-4.7-flash_q4_K_M",
+  "start_row": 1,
+  "end_row": 10,
+  "scores": [
+    {
+      "factual_correctness": 0.45
+    },
+    {
+      "factual_correctness": 0.5
+    },
+    {
+      "factual_correctness": 0.24
+    },
+    {
+      "factual_correctness": 0.5
+    },
+    {
+      "factual_correctness": 0.4
+    },
+    {
+      "factual_correctness": 0.35
+    },
+    {
+      "factual_correctness": 0.4
+    },
+    {
+      "factual_correctness": 0.5
+    },
+    {
+      "factual_correctness": 0.24
+    },
+    {
+      "factual_correctness": 0.5
+    }
+  ]
+}

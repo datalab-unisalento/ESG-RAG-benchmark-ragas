@@ -1,0 +1,38 @@
+{
+  "judge_model": "nemotron-3.5-lightning:30b",
+  "rag_model": "ministral-3_8b",
+  "start_row": 1,
+  "end_row": 10,
+  "scores": [
+    {
+      "factual_correctness": 0.3
+    },
+    {
+      "factual_correctness": 0.4
+    },
+    {
+      "factual_correctness": 0.14
+    },
+    {
+      "factual_correctness": 0.5
+    },
+    {
+      "factual_correctness": 0.48
+    },
+    {
+      "factual_correctness": 0.36
+    },
+    {
+      "factual_correctness": 0.0
+    },
+    {
+      "factual_correctness": 0.9
+    },
+    {
+      "factual_correctness": 0.24
+    },
+    {
+      "factual_correctness": 0.29
+    }
+  ]
+}

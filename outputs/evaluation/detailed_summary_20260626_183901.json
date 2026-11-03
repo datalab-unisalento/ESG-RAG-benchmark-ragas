@@ -1,0 +1,75 @@
+{
+  "summary_table": [
+    {
+      "Model": "gemma4:e4b",
+      "LLMContextPrecisionWithReference": 0.8301886791622641,
+      "ContextPrecision": 0.7831325300421687,
+      "ContextRecall": 0.5783333333333334,
+      "ContextRelevance": 0.965,
+      "Faithfulness": 0.7963669833567792,
+      "FactualCorrectness": 0.40499999999999997,
+      "AnswerRelevancy": 0.7622207010936299
+    },
+    {
+      "Model": "glm-4.7-flash:q4_K_M",
+      "LLMContextPrecisionWithReference": 0.8775510203204082,
+      "ContextPrecision": 0.8026315788671052,
+      "ContextRecall": 0.6052631578947368,
+      "ContextRelevance": 0.985,
+      "Faithfulness": 0.8139169472502806,
+      "FactualCorrectness": 0.41320987654320984,
+      "AnswerRelevancy": 0.8187813916315284
+    },
+    {
+      "Model": "nemotron-3-nano:4b",
+      "LLMContextPrecisionWithReference": 0.8749999999124999,
+      "ContextPrecision": 0.78749999992125,
+      "ContextRecall": 0.6052631578947368,
+      "ContextRelevance": 0.985,
+      "Faithfulness": 0.6277282316093717,
+      "FactualCorrectness": 0.42037037037037034,
+      "AnswerRelevancy": 0.8507355409608275
+    },
+    {
+      "Model": "qwen3:4b-instruct",
+      "LLMContextPrecisionWithReference": 0.859999999914,
+      "ContextPrecision": 0.8051948051142858,
+      "ContextRecall": 0.6,
+      "ContextRelevance": 0.985,
+      "Faithfulness": 0.7138614703805729,
+      "FactualCorrectness": 0.4520481927710844,
+      "AnswerRelevancy": 0.8722646284921305
+    },
+    {
+      "Model": "gemma3:4b",
+      "LLMContextPrecisionWithReference": 0.8775510203204082,
+      "ContextPrecision": 0.8051948051142858,
+      "ContextRecall": 0.6,
+      "ContextRelevance": 0.985,
+      "Faithfulness": 0.7769786052949318,
+      "FactualCorrectness": 0.3962962962962963,
+      "AnswerRelevancy": 0.8775153109352573
+    },
+    {
+      "Model": "ministral-3:8b",
+      "LLMContextPrecisionWithReference": 0.8775510203204082,
+      "ContextPrecision": 0.7922077921285714,
+      "ContextRecall": 0.6,
+      "ContextRelevance": 0.985,
+      "Faithfulness": 0.616099976036473,
+      "FactualCorrectness": 0.4226388888888889,
+      "AnswerRelevancy": 0.8810152287189307
+    },
+    {
+      "Model": "gemma4:e2b",
+      "LLMContextPrecisionWithReference": 0.8301886791622641,
+      "ContextPrecision": 0.7831325300421687,
+      "ContextRecall": 0.5783333333333334,
+      "ContextRelevance": 0.965,
+      "Faithfulness": 0.7838544861571178,
+      "FactualCorrectness": 0.4232911392405063,
+      "AnswerRelevancy": 0.7598760576983342
+    }
+  ],
+  "timestamp": "20260626_183901"
+}

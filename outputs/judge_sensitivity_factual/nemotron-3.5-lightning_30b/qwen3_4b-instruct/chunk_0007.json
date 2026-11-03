@@ -1,0 +1,38 @@
+{
+  "judge_model": "nemotron-3.5-lightning:30b",
+  "rag_model": "qwen3_4b-instruct",
+  "start_row": 71,
+  "end_row": 80,
+  "scores": [
+    {
+      "factual_correctness": 0.0
+    },
+    {
+      "factual_correctness": 0.0
+    },
+    {
+      "factual_correctness": 0.8
+    },
+    {
+      "factual_correctness": 0.67
+    },
+    {
+      "factual_correctness": 0.67
+    },
+    {
+      "factual_correctness": 0.55
+    },
+    {
+      "factual_correctness": 0.33
+    },
+    {
+      "factual_correctness": 0.5
+    },
+    {
+      "factual_correctness": 0.56
+    },
+    {
+      "factual_correctness": 0.0
+    }
+  ]
+}

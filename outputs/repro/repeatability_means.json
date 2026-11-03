@@ -1,0 +1,92 @@
+{
+  "gemma3_4b": {
+    "faithfulness": [
+      0.737,
+      0.743
+    ],
+    "factual_correctness": [
+      0.404,
+      0.396
+    ],
+    "answer_relevancy": [
+      0.867,
+      0.865
+    ],
+    "context_recall": [
+      0.517,
+      0.507
+    ]
+  },
+  "glm-4.7-flash_q4_K_M": {
+    "faithfulness": [
+      0.855,
+      0.855
+    ],
+    "factual_correctness": [
+      0.351,
+      0.342
+    ],
+    "answer_relevancy": [
+      0.656,
+      0.657
+    ],
+    "context_recall": [
+      0.537,
+      0.507
+    ]
+  },
+  "ministral-3_8b": {
+    "faithfulness": [
+      0.628,
+      0.615
+    ],
+    "factual_correctness": [
+      0.387,
+      0.379
+    ],
+    "answer_relevancy": [
+      0.922,
+      0.912
+    ],
+    "context_recall": [
+      0.537,
+      0.507
+    ]
+  },
+  "nemotron-3-nano_4b": {
+    "faithfulness": [
+      0.675,
+      0.673
+    ],
+    "factual_correctness": [
+      0.43,
+      0.439
+    ],
+    "answer_relevancy": [
+      0.855,
+      0.856
+    ],
+    "context_recall": [
+      0.537,
+      0.507
+    ]
+  },
+  "qwen3_4b-instruct": {
+    "faithfulness": [
+      0.676,
+      0.702
+    ],
+    "factual_correctness": [
+      0.403,
+      0.408
+    ],
+    "answer_relevancy": [
+      0.865,
+      0.865
+    ],
+    "context_recall": [
+      0.537,
+      0.507
+    ]
+  }
+}

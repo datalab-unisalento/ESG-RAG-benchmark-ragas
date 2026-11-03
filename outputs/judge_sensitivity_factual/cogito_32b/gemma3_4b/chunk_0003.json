@@ -1,0 +1,38 @@
+{
+  "judge_model": "cogito:32b",
+  "rag_model": "gemma3_4b",
+  "start_row": 31,
+  "end_row": 40,
+  "scores": [
+    {
+      "factual_correctness": 0.4
+    },
+    {
+      "factual_correctness": 0.0
+    },
+    {
+      "factual_correctness": 0.4
+    },
+    {
+      "factual_correctness": 0.62
+    },
+    {
+      "factual_correctness": 0.67
+    },
+    {
+      "factual_correctness": 0.53
+    },
+    {
+      "factual_correctness": 0.6
+    },
+    {
+      "factual_correctness": 0.53
+    },
+    {
+      "factual_correctness": 0.0
+    },
+    {
+      "factual_correctness": 0.78
+    }
+  ]
+}

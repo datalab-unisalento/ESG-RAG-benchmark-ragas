@@ -1,0 +1,48 @@
+{
+  "nemotron-3.5-lightning:30b": {
+    "gemma3_4b": {
+      "factual_correctness": 0.40850000000000003
+    },
+    "gemma4_e2b": {
+      "factual_correctness": 0.3862
+    },
+    "gemma4_e4b": {
+      "factual_correctness": 0.3892929292929293
+    },
+    "glm-4.7-flash_q4_K_M": {
+      "factual_correctness": 0.41122448979591836
+    },
+    "ministral-3_8b": {
+      "factual_correctness": 0.3030612244897959
+    },
+    "nemotron-3-nano_4b": {
+      "factual_correctness": 0.4213131313131313
+    },
+    "qwen3_4b-instruct": {
+      "factual_correctness": 0.3958333333333333
+    }
+  },
+  "cogito:32b": {
+    "gemma3_4b": {
+      "factual_correctness": 0.5027
+    },
+    "gemma4_e2b": {
+      "factual_correctness": 0.4556
+    },
+    "gemma4_e4b": {
+      "factual_correctness": 0.46869999999999995
+    },
+    "glm-4.7-flash_q4_K_M": {
+      "factual_correctness": 0.5125
+    },
+    "ministral-3_8b": {
+      "factual_correctness": 0.4208
+    },
+    "nemotron-3-nano_4b": {
+      "factual_correctness": 0.5264
+    },
+    "qwen3_4b-instruct": {
+      "factual_correctness": 0.49
+    }
+  }
+}

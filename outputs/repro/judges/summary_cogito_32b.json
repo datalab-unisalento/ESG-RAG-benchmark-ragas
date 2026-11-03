@@ -1,0 +1,56 @@
+{
+  "judge_model": "cogito:32b",
+  "n_rag_models": 5,
+  "results": [
+    {
+      "Model": "gemma3_4b",
+      "llm_context_precision_with_reference": 0.6599999999339999,
+      "context_precision": 0.639999999936,
+      "context_recall": 0.6658333333333333,
+      "context_relevance": 0.9475,
+      "faithfulness": 0.8811596320346321,
+      "factual_correctness": 0.48869999999999997,
+      "answer_relevancy": 0.8552463444071831
+    },
+    {
+      "Model": "glm-4.7-flash_q4_K_M",
+      "llm_context_precision_with_reference": 0.6599999999339999,
+      "context_precision": 0.639999999936,
+      "context_recall": 0.6658333333333333,
+      "context_relevance": 0.955,
+      "faithfulness": 0.9486286919831223,
+      "factual_correctness": 0.4292,
+      "answer_relevancy": 0.6307139566711457
+    },
+    {
+      "Model": "ministral-3_8b",
+      "llm_context_precision_with_reference": 0.6599999999339999,
+      "context_precision": 0.639999999936,
+      "context_recall": 0.6658333333333333,
+      "context_relevance": 0.9525,
+      "faithfulness": 0.7428353798408937,
+      "factual_correctness": 0.4355,
+      "answer_relevancy": 0.8419144385736452
+    },
+    {
+      "Model": "nemotron-3-nano_4b",
+      "llm_context_precision_with_reference": 0.6599999999339999,
+      "context_precision": 0.639999999936,
+      "context_recall": 0.6658333333333333,
+      "context_relevance": 0.9525,
+      "faithfulness": 0.7746435205765348,
+      "factual_correctness": 0.5338,
+      "answer_relevancy": 0.8510808855861717
+    },
+    {
+      "Model": "qwen3_4b-instruct",
+      "llm_context_precision_with_reference": 0.6599999999339999,
+      "context_precision": 0.639999999936,
+      "context_recall": 0.6658333333333333,
+      "context_relevance": 0.9525,
+      "faithfulness": 0.842486528057426,
+      "factual_correctness": 0.49369999999999997,
+      "answer_relevancy": 0.7939004642833397
+    }
+  ]
+}

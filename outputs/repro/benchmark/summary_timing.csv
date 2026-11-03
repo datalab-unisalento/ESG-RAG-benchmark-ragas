@@ -1,0 +1,6 @@
+model,n,prompt_tokens_median,output_tokens_median,output_tokens_total,wall_s_median,wall_s_p90,output_tokens_per_s_median
+gemma3:4b,50,274.5,70.0,3510,0.447,0.707,201.55
+glm-4.7-flash:q4_K_M,50,258.0,745.0,37300,4.536,6.214,167.72
+ministral-3:8b,50,268.5,283.5,14194,2.478,4.337,118.96
+nemotron-3-nano:4b,50,291.0,236.5,12898,1.303,2.154,208.11
+qwen3:4b-instruct,50,271.0,140.0,7322,0.722,1.199,220.0
