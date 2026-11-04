@@ -19,6 +19,26 @@ Public repository: https://github.com/datalab-unisalento/ESG-RAG-benchmark-ragas
 | `code/` | All scripts; see below |
 | `code/run_reproduction.sh` | Runs the controlled rerun stage by stage, resumable |
 
+## Models used
+
+**1. Data creation (synthetic QA pairs)**
+- `qwen3:4b-instruct` wrote the questions and reference answers.
+- `qwen3-embedding:4b` built the embedding index for the knowledge graph.
+
+**2. Answer generation (models benchmarked)**
+- glm-4.7-flash (`glm-4.7-flash:q4_K_M`, 29.9B mixture-of-experts, 4-bit)
+- ministral-3 (`ministral-3:8b`)
+- gemma3 (`gemma3:4b`)
+- qwen3 (`qwen3:4b-instruct`)
+- nemotron-3-nano (`nemotron-3-nano:4b`)
+
+**3. Evaluation (RAGAS scoring of the answers)**
+- Main judge: `qwen3:4b-instruct`. It is also the data-creation model, a self-preference risk the paper discusses.
+- Independent judges: `nemotron-3.5-lightning:30b` and `cogito:32b`.
+- Embeddings: `qwen3-embedding:4b`, for retrieval and answer relevancy.
+
+**Also used in evaluation (QA consistency check on the reference answers):** `gemma4:12b`, `ministral-3:8b`, and `nemotron-3.5-lightning:30b`.
+
 ## Controlled settings (used for all reported results)
 
 - **Generation:** temperature 0, seed 42, 8,192-token context, 1,024 output tokens, for every model.
