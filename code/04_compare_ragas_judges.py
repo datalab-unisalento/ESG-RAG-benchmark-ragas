@@ -37,7 +37,7 @@ from ragas.metrics import (
 
 DEFAULT_JUDGES = ["nemotron-3.5-lightning:30b", "cogito:32b"]
 # Fixed judge settings, recorded in the run manifest
-JUDGE_OPTIONS = {"temperature": 0, "seed": 42, "num_ctx": 8192}
+JUDGE_OPTIONS = {"temperature": 0, "seed": 42, "num_ctx": 8192, "reasoning": False}  # thinking disabled, as for generation
 METRICS = {
     "llm_context_precision_with_reference": (
         LLMContextPrecisionWithReference,

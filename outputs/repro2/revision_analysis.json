@@ -1,0 +1,2915 @@
+{
+  "seed": 42,
+  "judges": [
+    "qwen3",
+    "nemotron",
+    "cogito",
+    "granite",
+    "lfm2.5"
+  ],
+  "pairwise": {
+    "qwen3 | faithfulness | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": 0.14926104169973142,
+      "ci95": [
+        0.07982480485271272,
+        0.21592766479336353
+      ],
+      "p_two_sided_bootstrap": 0.0,
+      "n_paired": 95,
+      "p_holm": 0.0
+    },
+    "qwen3 | faithfulness | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": 0.019237019994595754,
+      "ci95": [
+        -0.05191506024839358,
+        0.09111135777802444
+      ],
+      "p_two_sided_bootstrap": 0.5848,
+      "n_paired": 99,
+      "p_holm": 1.0
+    },
+    "qwen3 | faithfulness | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": 0.08510725421668747,
+      "ci95": [
+        0.020402088363957325,
+        0.14917034391792716
+      ],
+      "p_two_sided_bootstrap": 0.0116,
+      "n_paired": 98,
+      "p_holm": 0.0812
+    },
+    "qwen3 | faithfulness | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": 0.10258902095636789,
+      "ci95": [
+        0.0374266323245915,
+        0.16669574756309452
+      ],
+      "p_two_sided_bootstrap": 0.002,
+      "n_paired": 98,
+      "p_holm": 0.016
+    },
+    "qwen3 | faithfulness | ministral-3_8b minus gemma3_4b": {
+      "diff": -0.13289038374117043,
+      "ci95": [
+        -0.20384899169248952,
+        -0.06202105259198381
+      ],
+      "p_two_sided_bootstrap": 0.0004,
+      "n_paired": 96,
+      "p_holm": 0.0036000000000000003
+    },
+    "qwen3 | faithfulness | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": -0.0662030320867275,
+      "ci95": [
+        -0.11870588199132935,
+        -0.01517850920793642
+      ],
+      "p_two_sided_bootstrap": 0.0128,
+      "n_paired": 95,
+      "p_holm": 0.0812
+    },
+    "qwen3 | faithfulness | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.06548123963045566,
+      "ci95": [
+        -0.13031908978356616,
+        0.0009723380745725625
+      ],
+      "p_two_sided_bootstrap": 0.0532,
+      "n_paired": 95,
+      "p_holm": 0.2128
+    },
+    "qwen3 | faithfulness | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": 0.06374793872495346,
+      "ci95": [
+        -0.004459663143873668,
+        0.1304896163278751
+      ],
+      "p_two_sided_bootstrap": 0.0668,
+      "n_paired": 99,
+      "p_holm": 0.2128
+    },
+    "qwen3 | faithfulness | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": 0.07936962027871118,
+      "ci95": [
+        0.009048639351669654,
+        0.1496699708820921
+      ],
+      "p_two_sided_bootstrap": 0.0284,
+      "n_paired": 99,
+      "p_holm": 0.14200000000000002
+    },
+    "qwen3 | faithfulness | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": 0.016855200323640327,
+      "ci95": [
+        -0.039947216946964216,
+        0.07715648267474261
+      ],
+      "p_two_sided_bootstrap": 0.5672,
+      "n_paired": 98,
+      "p_holm": 1.0
+    },
+    "qwen3 | answer_relevancy | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": -0.04957483972684485,
+      "ci95": [
+        -0.10224668821375169,
+        0.0018701218430851186
+      ],
+      "p_two_sided_bootstrap": 0.0572,
+      "n_paired": 100,
+      "p_holm": 0.5148
+    },
+    "qwen3 | answer_relevancy | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": -0.015849080968138043,
+      "ci95": [
+        -0.06047107389340833,
+        0.027373115825242204
+      ],
+      "p_two_sided_bootstrap": 0.4876,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "qwen3 | answer_relevancy | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": -0.01209865339277327,
+      "ci95": [
+        -0.07148051388527325,
+        0.050002124484311454
+      ],
+      "p_two_sided_bootstrap": 0.6896,
+      "n_paired": 99,
+      "p_holm": 1.0
+    },
+    "qwen3 | answer_relevancy | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": -0.05288486172212371,
+      "ci95": [
+        -0.10818206753121,
+        -0.0004906213009194155
+      ],
+      "p_two_sided_bootstrap": 0.0464,
+      "n_paired": 100,
+      "p_holm": 0.46399999999999997
+    },
+    "qwen3 | answer_relevancy | ministral-3_8b minus gemma3_4b": {
+      "diff": 0.0337257587587068,
+      "ci95": [
+        -0.011059464907741852,
+        0.07474924568178869
+      ],
+      "p_two_sided_bootstrap": 0.1296,
+      "n_paired": 100,
+      "p_holm": 0.9536
+    },
+    "qwen3 | answer_relevancy | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": 0.039693520563835356,
+      "ci95": [
+        -0.01557242208911759,
+        0.09943649983385475
+      ],
+      "p_two_sided_bootstrap": 0.1536,
+      "n_paired": 99,
+      "p_holm": 0.9536
+    },
+    "qwen3 | answer_relevancy | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.0033100219952788643,
+      "ci95": [
+        -0.0506542529201159,
+        0.04087155615653103
+      ],
+      "p_two_sided_bootstrap": 0.888,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "qwen3 | answer_relevancy | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": 0.00440899861608952,
+      "ci95": [
+        -0.046107608639998174,
+        0.06265239577340088
+      ],
+      "p_two_sided_bootstrap": 0.9128,
+      "n_paired": 99,
+      "p_holm": 1.0
+    },
+    "qwen3 | answer_relevancy | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": -0.03703578075398567,
+      "ci95": [
+        -0.08594917459191642,
+        0.010942721828509217
+      ],
+      "p_two_sided_bootstrap": 0.1192,
+      "n_paired": 100,
+      "p_holm": 0.9536
+    },
+    "qwen3 | answer_relevancy | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": -0.041320398851796135,
+      "ci95": [
+        -0.10866671274612673,
+        0.017397437471679853
+      ],
+      "p_two_sided_bootstrap": 0.1828,
+      "n_paired": 99,
+      "p_holm": 0.9536
+    },
+    "qwen3 | factual_correctness | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": 0.0022105263157894788,
+      "ci95": [
+        -0.07021052631578947,
+        0.07726315789473684
+      ],
+      "p_two_sided_bootstrap": 0.9544,
+      "n_paired": 95,
+      "p_holm": 1.0
+    },
+    "qwen3 | factual_correctness | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": -0.02020618556701031,
+      "ci95": [
+        -0.08092783505154638,
+        0.040721649484536084
+      ],
+      "p_two_sided_bootstrap": 0.5236,
+      "n_paired": 97,
+      "p_holm": 1.0
+    },
+    "qwen3 | factual_correctness | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": -0.01845360824742268,
+      "ci95": [
+        -0.08257731958762886,
+        0.046701030927835056
+      ],
+      "p_two_sided_bootstrap": 0.5748,
+      "n_paired": 97,
+      "p_holm": 1.0
+    },
+    "qwen3 | factual_correctness | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": -0.04646464646464647,
+      "ci95": [
+        -0.108989898989899,
+        0.01626262626262626
+      ],
+      "p_two_sided_bootstrap": 0.1384,
+      "n_paired": 99,
+      "p_holm": 1.0
+    },
+    "qwen3 | factual_correctness | ministral-3_8b minus gemma3_4b": {
+      "diff": -0.022021276595744686,
+      "ci95": [
+        -0.08595744680851064,
+        0.037340425531914884
+      ],
+      "p_two_sided_bootstrap": 0.4872,
+      "n_paired": 94,
+      "p_holm": 1.0
+    },
+    "qwen3 | factual_correctness | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": -0.0297872340425532,
+      "ci95": [
+        -0.085,
+        0.027659574468085098
+      ],
+      "p_two_sided_bootstrap": 0.2992,
+      "n_paired": 94,
+      "p_holm": 1.0
+    },
+    "qwen3 | factual_correctness | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.054166666666666675,
+      "ci95": [
+        -0.12322916666666668,
+        0.013958333333333328
+      ],
+      "p_two_sided_bootstrap": 0.1164,
+      "n_paired": 96,
+      "p_holm": 1.0
+    },
+    "qwen3 | factual_correctness | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": 0.0040624999999999975,
+      "ci95": [
+        -0.058125,
+        0.06416666666666666
+      ],
+      "p_two_sided_bootstrap": 0.9188,
+      "n_paired": 96,
+      "p_holm": 1.0
+    },
+    "qwen3 | factual_correctness | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": -0.023775510204081637,
+      "ci95": [
+        -0.08887755102040816,
+        0.04275510204081633
+      ],
+      "p_two_sided_bootstrap": 0.4664,
+      "n_paired": 98,
+      "p_holm": 1.0
+    },
+    "qwen3 | factual_correctness | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": -0.029183673469387758,
+      "ci95": [
+        -0.07795918367346939,
+        0.020816326530612245
+      ],
+      "p_two_sided_bootstrap": 0.256,
+      "n_paired": 98,
+      "p_holm": 1.0
+    },
+    "nemotron | faithfulness | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": 0.08272633706616722,
+      "ci95": [
+        0.03551750909062679,
+        0.13007676241779303
+      ],
+      "p_two_sided_bootstrap": 0.0012,
+      "n_paired": 98,
+      "p_holm": 0.011999999999999999
+    },
+    "nemotron | faithfulness | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": -0.0001395146803310125,
+      "ci95": [
+        -0.03875268722207498,
+        0.041098300792178334
+      ],
+      "p_two_sided_bootstrap": 0.9748,
+      "n_paired": 98,
+      "p_holm": 1.0
+    },
+    "nemotron | faithfulness | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": 0.05414772772955489,
+      "ci95": [
+        0.008436257411301972,
+        0.09904143314406942
+      ],
+      "p_two_sided_bootstrap": 0.0184,
+      "n_paired": 99,
+      "p_holm": 0.144
+    },
+    "nemotron | faithfulness | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": 0.05355006105006105,
+      "ci95": [
+        -0.0035506438006438056,
+        0.11307711732711732
+      ],
+      "p_two_sided_bootstrap": 0.0648,
+      "n_paired": 100,
+      "p_holm": 0.32399999999999995
+    },
+    "nemotron | faithfulness | ministral-3_8b minus gemma3_4b": {
+      "diff": -0.08453880485446481,
+      "ci95": [
+        -0.13526188034460093,
+        -0.034330668820558526
+      ],
+      "p_two_sided_bootstrap": 0.0024,
+      "n_paired": 96,
+      "p_holm": 0.021599999999999998
+    },
+    "nemotron | faithfulness | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": -0.03312600674149609,
+      "ci95": [
+        -0.08895967158826348,
+        0.021523505938067206
+      ],
+      "p_two_sided_bootstrap": 0.2284,
+      "n_paired": 97,
+      "p_holm": 0.9136
+    },
+    "nemotron | faithfulness | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.029358927831411055,
+      "ci95": [
+        -0.08660140839795809,
+        0.03070463625448777
+      ],
+      "p_two_sided_bootstrap": 0.3352,
+      "n_paired": 98,
+      "p_holm": 1.0
+    },
+    "nemotron | faithfulness | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": 0.0609034104869248,
+      "ci95": [
+        0.009617420851502117,
+        0.1119541852913302
+      ],
+      "p_two_sided_bootstrap": 0.018,
+      "n_paired": 97,
+      "p_holm": 0.144
+    },
+    "nemotron | faithfulness | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": 0.05302942522330278,
+      "ci95": [
+        0.0003293192068702253,
+        0.10889968874662752
+      ],
+      "p_two_sided_bootstrap": 0.0492,
+      "n_paired": 98,
+      "p_holm": 0.2952
+    },
+    "nemotron | faithfulness | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": -5.6756971917460775e-05,
+      "ci95": [
+        -0.05686398316029532,
+        0.061670856255245037
+      ],
+      "p_two_sided_bootstrap": 0.9768,
+      "n_paired": 99,
+      "p_holm": 1.0
+    },
+    "nemotron | answer_relevancy | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": -0.05202920730532083,
+      "ci95": [
+        -0.12904654247491382,
+        0.0246586088360801
+      ],
+      "p_two_sided_bootstrap": 0.1828,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "nemotron | answer_relevancy | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": -0.05738542182205462,
+      "ci95": [
+        -0.1189831862965748,
+        0.003345149288992232
+      ],
+      "p_two_sided_bootstrap": 0.0636,
+      "n_paired": 100,
+      "p_holm": 0.636
+    },
+    "nemotron | answer_relevancy | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": -0.005657057424343172,
+      "ci95": [
+        -0.07528441084254263,
+        0.06657076908349886
+      ],
+      "p_two_sided_bootstrap": 0.8552,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "nemotron | answer_relevancy | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": -0.053623311542996335,
+      "ci95": [
+        -0.11868359362346874,
+        0.007640560917925438
+      ],
+      "p_two_sided_bootstrap": 0.0864,
+      "n_paired": 100,
+      "p_holm": 0.7776000000000001
+    },
+    "nemotron | answer_relevancy | ministral-3_8b minus gemma3_4b": {
+      "diff": -0.00535621451673379,
+      "ci95": [
+        -0.08185671973782328,
+        0.06787952644761566
+      ],
+      "p_two_sided_bootstrap": 0.8896,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "nemotron | answer_relevancy | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": 0.04637214988097767,
+      "ci95": [
+        -0.027408495695570457,
+        0.12134926197810547
+      ],
+      "p_two_sided_bootstrap": 0.2148,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "nemotron | answer_relevancy | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.0015941042376754983,
+      "ci95": [
+        -0.0782574158427713,
+        0.07154881948552662
+      ],
+      "p_two_sided_bootstrap": 0.9584,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "nemotron | answer_relevancy | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": 0.05172836439771145,
+      "ci95": [
+        -0.0169042864553278,
+        0.12691990913454743
+      ],
+      "p_two_sided_bootstrap": 0.154,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "nemotron | answer_relevancy | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": 0.003762110279058292,
+      "ci95": [
+        -0.05501135870269166,
+        0.06428598811442496
+      ],
+      "p_two_sided_bootstrap": 0.8968,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "nemotron | answer_relevancy | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": -0.04796625411865316,
+      "ci95": [
+        -0.12440413447225622,
+        0.028921996885865865
+      ],
+      "p_two_sided_bootstrap": 0.2272,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "nemotron | factual_correctness | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": -0.058673469387755105,
+      "ci95": [
+        -0.11887755102040817,
+        0.0022448979591836757
+      ],
+      "p_two_sided_bootstrap": 0.0628,
+      "n_paired": 98,
+      "p_holm": 0.5024
+    },
+    "nemotron | factual_correctness | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": -0.005773195876288659,
+      "ci95": [
+        -0.06835051546391753,
+        0.05536082474226805
+      ],
+      "p_two_sided_bootstrap": 0.8512,
+      "n_paired": 97,
+      "p_holm": 1.0
+    },
+    "nemotron | factual_correctness | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": -0.035306122448979585,
+      "ci95": [
+        -0.09346938775510204,
+        0.02102040816326531
+      ],
+      "p_two_sided_bootstrap": 0.2408,
+      "n_paired": 98,
+      "p_holm": 1.0
+    },
+    "nemotron | factual_correctness | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": -0.05673469387755103,
+      "ci95": [
+        -0.1129591836734694,
+        -0.003877551020408162
+      ],
+      "p_two_sided_bootstrap": 0.0332,
+      "n_paired": 98,
+      "p_holm": 0.332
+    },
+    "nemotron | factual_correctness | ministral-3_8b minus gemma3_4b": {
+      "diff": 0.055656565656565654,
+      "ci95": [
+        0.0014141414141414068,
+        0.11131313131313131
+      ],
+      "p_two_sided_bootstrap": 0.042,
+      "n_paired": 99,
+      "p_holm": 0.378
+    },
+    "nemotron | factual_correctness | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": 0.0176,
+      "ci95": [
+        -0.032299999999999995,
+        0.0681
+      ],
+      "p_two_sided_bootstrap": 0.4744,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "nemotron | factual_correctness | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": 0.006599999999999994,
+      "ci95": [
+        -0.044199999999999996,
+        0.05659999999999999
+      ],
+      "p_two_sided_bootstrap": 0.7756,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "nemotron | factual_correctness | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": -0.03828282828282828,
+      "ci95": [
+        -0.09444444444444444,
+        0.016565656565656565
+      ],
+      "p_two_sided_bootstrap": 0.1752,
+      "n_paired": 99,
+      "p_holm": 1.0
+    },
+    "nemotron | factual_correctness | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": -0.049090909090909095,
+      "ci95": [
+        -0.10414141414141415,
+        0.0047474747474747486
+      ],
+      "p_two_sided_bootstrap": 0.0708,
+      "n_paired": 99,
+      "p_holm": 0.5024
+    },
+    "nemotron | factual_correctness | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": -0.011000000000000005,
+      "ci95": [
+        -0.06000000000000001,
+        0.040299999999999996
+      ],
+      "p_two_sided_bootstrap": 0.6736,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "cogito | faithfulness | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": 0.1850877999078675,
+      "ci95": [
+        0.13406986944832744,
+        0.23649378899463463
+      ],
+      "p_two_sided_bootstrap": 0.0,
+      "n_paired": 100,
+      "p_holm": 0.0
+    },
+    "cogito | faithfulness | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": 0.05622492784992785,
+      "ci95": [
+        0.014591269841269842,
+        0.10076984126984127
+      ],
+      "p_two_sided_bootstrap": 0.0056,
+      "n_paired": 100,
+      "p_holm": 0.028
+    },
+    "cogito | faithfulness | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": 0.09137098676177624,
+      "ci95": [
+        0.05107548557393759,
+        0.1325844842120384
+      ],
+      "p_two_sided_bootstrap": 0.0,
+      "n_paired": 100,
+      "p_holm": 0.0
+    },
+    "cogito | faithfulness | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": 0.1406811188811189,
+      "ci95": [
+        0.09051239038739038,
+        0.19431716894216894
+      ],
+      "p_two_sided_bootstrap": 0.0,
+      "n_paired": 100,
+      "p_holm": 0.0
+    },
+    "cogito | faithfulness | ministral-3_8b minus gemma3_4b": {
+      "diff": -0.12886287205793967,
+      "ci95": [
+        -0.19098927817470016,
+        -0.06418337320623967
+      ],
+      "p_two_sided_bootstrap": 0.0,
+      "n_paired": 100,
+      "p_holm": 0.0
+    },
+    "cogito | faithfulness | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": -0.09371681314609127,
+      "ci95": [
+        -0.14321304871437124,
+        -0.044826210995920907
+      ],
+      "p_two_sided_bootstrap": 0.0,
+      "n_paired": 100,
+      "p_holm": 0.0
+    },
+    "cogito | faithfulness | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.04440668102674863,
+      "ci95": [
+        -0.10640250943817806,
+        0.01934785027007204
+      ],
+      "p_two_sided_bootstrap": 0.156,
+      "n_paired": 100,
+      "p_holm": 0.312
+    },
+    "cogito | faithfulness | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": 0.03514605891184839,
+      "ci95": [
+        -0.02085724656320631,
+        0.09065973850710693
+      ],
+      "p_two_sided_bootstrap": 0.2124,
+      "n_paired": 100,
+      "p_holm": 0.312
+    },
+    "cogito | faithfulness | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": 0.08445619103119104,
+      "ci95": [
+        0.016429773004773,
+        0.15195615495615494
+      ],
+      "p_two_sided_bootstrap": 0.0136,
+      "n_paired": 100,
+      "p_holm": 0.0544
+    },
+    "cogito | faithfulness | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": 0.04931013211934264,
+      "ci95": [
+        -0.0024322176189823306,
+        0.10359938616594963
+      ],
+      "p_two_sided_bootstrap": 0.0652,
+      "n_paired": 100,
+      "p_holm": 0.1956
+    },
+    "cogito | answer_relevancy | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": -0.04971143902269068,
+      "ci95": [
+        -0.11551397317741705,
+        0.015508897822051724
+      ],
+      "p_two_sided_bootstrap": 0.1392,
+      "n_paired": 100,
+      "p_holm": 0.696
+    },
+    "cogito | answer_relevancy | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": -0.062411961776508734,
+      "ci95": [
+        -0.1216687517652484,
+        -0.010227004416914525
+      ],
+      "p_two_sided_bootstrap": 0.0176,
+      "n_paired": 100,
+      "p_holm": 0.1408
+    },
+    "cogito | answer_relevancy | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": 0.0008590145793533732,
+      "ci95": [
+        -0.0710671555488915,
+        0.07542794960460668
+      ],
+      "p_two_sided_bootstrap": 0.9992,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "cogito | answer_relevancy | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": -0.08638395514842792,
+      "ci95": [
+        -0.15138710076785633,
+        -0.027054540505333867
+      ],
+      "p_two_sided_bootstrap": 0.0044,
+      "n_paired": 100,
+      "p_holm": 0.044000000000000004
+    },
+    "cogito | answer_relevancy | ministral-3_8b minus gemma3_4b": {
+      "diff": -0.012700522753818045,
+      "ci95": [
+        -0.07472811524339634,
+        0.0416796086169369
+      ],
+      "p_two_sided_bootstrap": 0.6888,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "cogito | answer_relevancy | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": 0.050570453602044055,
+      "ci95": [
+        -0.009983837380680706,
+        0.11532355201437959
+      ],
+      "p_two_sided_bootstrap": 0.1132,
+      "n_paired": 100,
+      "p_holm": 0.6792
+    },
+    "cogito | answer_relevancy | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.03667251612573724,
+      "ci95": [
+        -0.09205069313158781,
+        0.014913189894596486
+      ],
+      "p_two_sided_bootstrap": 0.1868,
+      "n_paired": 100,
+      "p_holm": 0.7472
+    },
+    "cogito | answer_relevancy | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": 0.0632709763558621,
+      "ci95": [
+        -0.005445662130426711,
+        0.1395695444635933
+      ],
+      "p_two_sided_bootstrap": 0.074,
+      "n_paired": 100,
+      "p_holm": 0.518
+    },
+    "cogito | answer_relevancy | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": -0.023971993371919194,
+      "ci95": [
+        -0.07107735026388068,
+        0.022641996901562874
+      ],
+      "p_two_sided_bootstrap": 0.3168,
+      "n_paired": 100,
+      "p_holm": 0.9504000000000001
+    },
+    "cogito | answer_relevancy | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": -0.08724296972778128,
+      "ci95": [
+        -0.15833518173357036,
+        -0.022200549677056865
+      ],
+      "p_two_sided_bootstrap": 0.0064,
+      "n_paired": 100,
+      "p_holm": 0.057600000000000005
+    },
+    "cogito | factual_correctness | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": 0.05840000000000001,
+      "ci95": [
+        0.004200000000000008,
+        0.1142
+      ],
+      "p_two_sided_bootstrap": 0.0332,
+      "n_paired": 100,
+      "p_holm": 0.2528
+    },
+    "cogito | factual_correctness | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": -0.0035999999999999956,
+      "ci95": [
+        -0.0663,
+        0.0577
+      ],
+      "p_two_sided_bootstrap": 0.9344,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "cogito | factual_correctness | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": 0.0006000000000000022,
+      "ci95": [
+        -0.05039999999999999,
+        0.04850000000000001
+      ],
+      "p_two_sided_bootstrap": 0.984,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "cogito | factual_correctness | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": -0.047299999999999995,
+      "ci95": [
+        -0.09639999999999999,
+        -0.0013999999999999956
+      ],
+      "p_two_sided_bootstrap": 0.0448,
+      "n_paired": 100,
+      "p_holm": 0.2528
+    },
+    "cogito | factual_correctness | ministral-3_8b minus gemma3_4b": {
+      "diff": -0.062,
+      "ci95": [
+        -0.11630000000000001,
+        -0.005599999999999995
+      ],
+      "p_two_sided_bootstrap": 0.0316,
+      "n_paired": 100,
+      "p_holm": 0.2528
+    },
+    "cogito | factual_correctness | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": -0.057800000000000004,
+      "ci95": [
+        -0.1033,
+        -0.013400000000000006
+      ],
+      "p_two_sided_bootstrap": 0.0124,
+      "n_paired": 100,
+      "p_holm": 0.11159999999999999
+    },
+    "cogito | factual_correctness | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.1057,
+      "ci95": [
+        -0.1528,
+        -0.0584
+      ],
+      "p_two_sided_bootstrap": 0.0,
+      "n_paired": 100,
+      "p_holm": 0.0
+    },
+    "cogito | factual_correctness | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": 0.004199999999999997,
+      "ci95": [
+        -0.049699999999999994,
+        0.0581
+      ],
+      "p_two_sided_bootstrap": 0.8856,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "cogito | factual_correctness | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": -0.0437,
+      "ci95": [
+        -0.0967,
+        0.007700000000000001
+      ],
+      "p_two_sided_bootstrap": 0.0916,
+      "n_paired": 100,
+      "p_holm": 0.3664
+    },
+    "cogito | factual_correctness | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": -0.0479,
+      "ci95": [
+        -0.0931,
+        -0.003100000000000004
+      ],
+      "p_two_sided_bootstrap": 0.0372,
+      "n_paired": 100,
+      "p_holm": 0.2528
+    },
+    "granite | faithfulness | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": 0.0942982262405637,
+      "ci95": [
+        0.03331332371618749,
+        0.15582391950155108
+      ],
+      "p_two_sided_bootstrap": 0.0016,
+      "n_paired": 100,
+      "p_holm": 0.016
+    },
+    "granite | faithfulness | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": -0.009493894993894993,
+      "ci95": [
+        -0.05035103785103785,
+        0.029726495726495723
+      ],
+      "p_two_sided_bootstrap": 0.6456,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "granite | faithfulness | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": 0.033803893002422425,
+      "ci95": [
+        -0.02424499111999112,
+        0.09056209313562257
+      ],
+      "p_two_sided_bootstrap": 0.2524,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "granite | faithfulness | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": 0.06259126984126985,
+      "ci95": [
+        0.006146825396825401,
+        0.12216269841269842
+      ],
+      "p_two_sided_bootstrap": 0.032,
+      "n_paired": 100,
+      "p_holm": 0.192
+    },
+    "granite | faithfulness | ministral-3_8b minus gemma3_4b": {
+      "diff": -0.10379212123445869,
+      "ci95": [
+        -0.16216414205849192,
+        -0.04303753736803272
+      ],
+      "p_two_sided_bootstrap": 0.0016,
+      "n_paired": 100,
+      "p_holm": 0.016
+    },
+    "granite | faithfulness | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": -0.06049433323814128,
+      "ci95": [
+        -0.1071761375449456,
+        -0.017125828419946063
+      ],
+      "p_two_sided_bootstrap": 0.0092,
+      "n_paired": 100,
+      "p_holm": 0.0644
+    },
+    "granite | faithfulness | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.03170695639929386,
+      "ci95": [
+        -0.08837102079207343,
+        0.030046135151398312
+      ],
+      "p_two_sided_bootstrap": 0.308,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "granite | faithfulness | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": 0.043297787996317415,
+      "ci95": [
+        -0.012761530136530131,
+        0.09817189999542941
+      ],
+      "p_two_sided_bootstrap": 0.13,
+      "n_paired": 100,
+      "p_holm": 0.65
+    },
+    "granite | faithfulness | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": 0.07208516483516485,
+      "ci95": [
+        0.019285409035409037,
+        0.12630128205128205
+      ],
+      "p_two_sided_bootstrap": 0.0048,
+      "n_paired": 100,
+      "p_holm": 0.0384
+    },
+    "granite | faithfulness | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": 0.028787376838847422,
+      "ci95": [
+        -0.021288716185775013,
+        0.07920022787669846
+      ],
+      "p_two_sided_bootstrap": 0.2672,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "granite | answer_relevancy | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": -0.060694302534842724,
+      "ci95": [
+        -0.12564207836286193,
+        0.00468984793774315
+      ],
+      "p_two_sided_bootstrap": 0.07,
+      "n_paired": 100,
+      "p_holm": 0.49000000000000005
+    },
+    "granite | answer_relevancy | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": -0.07014220942563375,
+      "ci95": [
+        -0.12669879532282205,
+        -0.01877129975089528
+      ],
+      "p_two_sided_bootstrap": 0.0056,
+      "n_paired": 100,
+      "p_holm": 0.0504
+    },
+    "granite | answer_relevancy | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": -0.01932175413685592,
+      "ci95": [
+        -0.09111084347031305,
+        0.052149904289361226
+      ],
+      "p_two_sided_bootstrap": 0.6064,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "granite | answer_relevancy | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": -0.10029842050041973,
+      "ci95": [
+        -0.1609940659423682,
+        -0.04600998716956408
+      ],
+      "p_two_sided_bootstrap": 0.0,
+      "n_paired": 100,
+      "p_holm": 0.0
+    },
+    "granite | answer_relevancy | ministral-3_8b minus gemma3_4b": {
+      "diff": -0.00944790689079102,
+      "ci95": [
+        -0.07141643664442311,
+        0.05019768544005891
+      ],
+      "p_two_sided_bootstrap": 0.7572,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "granite | answer_relevancy | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": 0.041372548397986805,
+      "ci95": [
+        -0.028280286516074442,
+        0.11250413352867496
+      ],
+      "p_two_sided_bootstrap": 0.2536,
+      "n_paired": 100,
+      "p_holm": 0.7607999999999999
+    },
+    "granite | answer_relevancy | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.039604117965577,
+      "ci95": [
+        -0.0876412694814809,
+        0.004219833368170372
+      ],
+      "p_two_sided_bootstrap": 0.0852,
+      "n_paired": 100,
+      "p_holm": 0.5112
+    },
+    "granite | answer_relevancy | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": 0.050820455288777835,
+      "ci95": [
+        -0.017509577073939013,
+        0.1229656967334606
+      ],
+      "p_two_sided_bootstrap": 0.1464,
+      "n_paired": 100,
+      "p_holm": 0.732
+    },
+    "granite | answer_relevancy | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": -0.03015621107478599,
+      "ci95": [
+        -0.0743166604578149,
+        0.015176359708033755
+      ],
+      "p_two_sided_bootstrap": 0.174,
+      "n_paired": 100,
+      "p_holm": 0.732
+    },
+    "granite | answer_relevancy | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": -0.0809766663635638,
+      "ci95": [
+        -0.15470129791795606,
+        -0.012485857939091795
+      ],
+      "p_two_sided_bootstrap": 0.0192,
+      "n_paired": 100,
+      "p_holm": 0.1536
+    },
+    "granite | factual_correctness | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": 0.054400000000000004,
+      "ci95": [
+        0.0015000000000000022,
+        0.1066
+      ],
+      "p_two_sided_bootstrap": 0.0424,
+      "n_paired": 100,
+      "p_holm": 0.3392
+    },
+    "granite | factual_correctness | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": 0.011000000000000005,
+      "ci95": [
+        -0.046799999999999994,
+        0.0714
+      ],
+      "p_two_sided_bootstrap": 0.716,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "granite | factual_correctness | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": -0.0035999999999999995,
+      "ci95": [
+        -0.0557,
+        0.050100000000000006
+      ],
+      "p_two_sided_bootstrap": 0.8752,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "granite | factual_correctness | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": -0.00019999999999999852,
+      "ci95": [
+        -0.0562,
+        0.053500000000000006
+      ],
+      "p_two_sided_bootstrap": 0.9936,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "granite | factual_correctness | ministral-3_8b minus gemma3_4b": {
+      "diff": -0.0434,
+      "ci95": [
+        -0.0934,
+        0.006300000000000001
+      ],
+      "p_two_sided_bootstrap": 0.0888,
+      "n_paired": 100,
+      "p_holm": 0.6216
+    },
+    "granite | factual_correctness | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": -0.057999999999999996,
+      "ci95": [
+        -0.1033,
+        -0.012000000000000002
+      ],
+      "p_two_sided_bootstrap": 0.0108,
+      "n_paired": 100,
+      "p_holm": 0.10800000000000001
+    },
+    "granite | factual_correctness | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.0546,
+      "ci95": [
+        -0.1056,
+        -0.0033000000000000017
+      ],
+      "p_two_sided_bootstrap": 0.0316,
+      "n_paired": 100,
+      "p_holm": 0.28440000000000004
+    },
+    "granite | factual_correctness | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": -0.014600000000000002,
+      "ci95": [
+        -0.0626,
+        0.034699999999999995
+      ],
+      "p_two_sided_bootstrap": 0.56,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "granite | factual_correctness | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": -0.011200000000000003,
+      "ci95": [
+        -0.061700000000000005,
+        0.03789999999999999
+      ],
+      "p_two_sided_bootstrap": 0.6656,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "granite | factual_correctness | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": 0.0034,
+      "ci95": [
+        -0.04369999999999999,
+        0.05159999999999999
+      ],
+      "p_two_sided_bootstrap": 0.8816,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | faithfulness | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": 0.1276967143202352,
+      "ci95": [
+        0.07067404621471436,
+        0.1850779216986498
+      ],
+      "p_two_sided_bootstrap": 0.0,
+      "n_paired": 97,
+      "p_holm": 0.0
+    },
+    "lfm2.5 | faithfulness | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": -0.0008538267288267248,
+      "ci95": [
+        -0.047310966810966804,
+        0.04431568431568432
+      ],
+      "p_two_sided_bootstrap": 0.98,
+      "n_paired": 100,
+      "p_holm": 0.9952
+    },
+    "lfm2.5 | faithfulness | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": 0.029308640446091654,
+      "ci95": [
+        -0.01605952471161449,
+        0.07494022699679585
+      ],
+      "p_two_sided_bootstrap": 0.202,
+      "n_paired": 100,
+      "p_holm": 0.6592
+    },
+    "lfm2.5 | faithfulness | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": 0.04315388777888779,
+      "ci95": [
+        -0.007460997335997329,
+        0.09328137140637142
+      ],
+      "p_two_sided_bootstrap": 0.098,
+      "n_paired": 100,
+      "p_holm": 0.49
+    },
+    "lfm2.5 | faithfulness | ministral-3_8b minus gemma3_4b": {
+      "diff": -0.12788966283792597,
+      "ci95": [
+        -0.19015334309392418,
+        -0.06640847168128108
+      ],
+      "p_two_sided_bootstrap": 0.0,
+      "n_paired": 97,
+      "p_holm": 0.0
+    },
+    "lfm2.5 | faithfulness | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": -0.10595813883171,
+      "ci95": [
+        -0.16327600434864353,
+        -0.04888885929883417
+      ],
+      "p_two_sided_bootstrap": 0.0,
+      "n_paired": 97,
+      "p_holm": 0.0
+    },
+    "lfm2.5 | faithfulness | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.09056524613206596,
+      "ci95": [
+        -0.14884933245551912,
+        -0.03342592118380926
+      ],
+      "p_two_sided_bootstrap": 0.0016,
+      "n_paired": 97,
+      "p_holm": 0.0112
+    },
+    "lfm2.5 | faithfulness | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": 0.03016246717491838,
+      "ci95": [
+        -0.011439944905754573,
+        0.07359719825051632
+      ],
+      "p_two_sided_bootstrap": 0.1648,
+      "n_paired": 100,
+      "p_holm": 0.6592
+    },
+    "lfm2.5 | faithfulness | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": 0.04400771450771451,
+      "ci95": [
+        0.0023717948717948754,
+        0.08922280497280496
+      ],
+      "p_two_sided_bootstrap": 0.0376,
+      "n_paired": 100,
+      "p_holm": 0.22560000000000002
+    },
+    "lfm2.5 | faithfulness | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": 0.01384524733279613,
+      "ci95": [
+        -0.02495798563620612,
+        0.05618042342261618
+      ],
+      "p_two_sided_bootstrap": 0.4976,
+      "n_paired": 100,
+      "p_holm": 0.9952
+    },
+    "lfm2.5 | answer_relevancy | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": 0.007081987603322876,
+      "ci95": [
+        -0.03257326955536156,
+        0.051796849910926694
+      ],
+      "p_two_sided_bootstrap": 0.784,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | answer_relevancy | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": 0.016179324187793186,
+      "ci95": [
+        -0.01849422697483621,
+        0.0534652086539529
+      ],
+      "p_two_sided_bootstrap": 0.368,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | answer_relevancy | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": -0.012749304241942129,
+      "ci95": [
+        -0.06188310006272349,
+        0.04504140135316669
+      ],
+      "p_two_sided_bootstrap": 0.6148,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | answer_relevancy | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": -0.01790378822091557,
+      "ci95": [
+        -0.05500055095596803,
+        0.020501721968860354
+      ],
+      "p_two_sided_bootstrap": 0.3488,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | answer_relevancy | ministral-3_8b minus gemma3_4b": {
+      "diff": 0.009097336584470312,
+      "ci95": [
+        -0.040726292734363845,
+        0.056435069620336356
+      ],
+      "p_two_sided_bootstrap": 0.6772,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | answer_relevancy | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": -0.019831291845265008,
+      "ci95": [
+        -0.06724735941134066,
+        0.02994941163165147
+      ],
+      "p_two_sided_bootstrap": 0.4184,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | answer_relevancy | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.024985775824238443,
+      "ci95": [
+        -0.0722064560094727,
+        0.020481317104399332
+      ],
+      "p_two_sided_bootstrap": 0.2724,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | answer_relevancy | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": -0.028928628429735318,
+      "ci95": [
+        -0.07810216175655763,
+        0.023140374601696587
+      ],
+      "p_two_sided_bootstrap": 0.2636,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | answer_relevancy | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": -0.03408311240870875,
+      "ci95": [
+        -0.07197042326668986,
+        0.006370362729228374
+      ],
+      "p_two_sided_bootstrap": 0.0872,
+      "n_paired": 100,
+      "p_holm": 0.872
+    },
+    "lfm2.5 | answer_relevancy | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": -0.00515448397897344,
+      "ci95": [
+        -0.05354324837913112,
+        0.03658314335028402
+      ],
+      "p_two_sided_bootstrap": 0.8308,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | factual_correctness | glm-4.7-flash_q4_K_M minus ministral-3_8b": {
+      "diff": 0.0727,
+      "ci95": [
+        0.0231,
+        0.12380000000000001
+      ],
+      "p_two_sided_bootstrap": 0.0044,
+      "n_paired": 100,
+      "p_holm": 0.0308
+    },
+    "lfm2.5 | factual_correctness | glm-4.7-flash_q4_K_M minus gemma3_4b": {
+      "diff": -0.0169,
+      "ci95": [
+        -0.0745,
+        0.03940000000000001
+      ],
+      "p_two_sided_bootstrap": 0.568,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | factual_correctness | glm-4.7-flash_q4_K_M minus qwen3_4b-instruct": {
+      "diff": -0.007499999999999999,
+      "ci95": [
+        -0.05890000000000001,
+        0.0449
+      ],
+      "p_two_sided_bootstrap": 0.7664,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | factual_correctness | glm-4.7-flash_q4_K_M minus nemotron-3-nano_4b": {
+      "diff": -0.0603,
+      "ci95": [
+        -0.10830000000000001,
+        -0.013599999999999996
+      ],
+      "p_two_sided_bootstrap": 0.0096,
+      "n_paired": 100,
+      "p_holm": 0.0576
+    },
+    "lfm2.5 | factual_correctness | ministral-3_8b minus gemma3_4b": {
+      "diff": -0.08960000000000001,
+      "ci95": [
+        -0.1487,
+        -0.0339
+      ],
+      "p_two_sided_bootstrap": 0.0004,
+      "n_paired": 100,
+      "p_holm": 0.0036000000000000003
+    },
+    "lfm2.5 | factual_correctness | ministral-3_8b minus qwen3_4b-instruct": {
+      "diff": -0.0802,
+      "ci95": [
+        -0.1309,
+        -0.0307
+      ],
+      "p_two_sided_bootstrap": 0.0008,
+      "n_paired": 100,
+      "p_holm": 0.0064
+    },
+    "lfm2.5 | factual_correctness | ministral-3_8b minus nemotron-3-nano_4b": {
+      "diff": -0.133,
+      "ci95": [
+        -0.1861,
+        -0.07980000000000001
+      ],
+      "p_two_sided_bootstrap": 0.0,
+      "n_paired": 100,
+      "p_holm": 0.0
+    },
+    "lfm2.5 | factual_correctness | gemma3_4b minus qwen3_4b-instruct": {
+      "diff": 0.009400000000000002,
+      "ci95": [
+        -0.045999999999999985,
+        0.068
+      ],
+      "p_two_sided_bootstrap": 0.7532,
+      "n_paired": 100,
+      "p_holm": 1.0
+    },
+    "lfm2.5 | factual_correctness | gemma3_4b minus nemotron-3-nano_4b": {
+      "diff": -0.0434,
+      "ci95": [
+        -0.09849999999999999,
+        0.0105
+      ],
+      "p_two_sided_bootstrap": 0.1196,
+      "n_paired": 100,
+      "p_holm": 0.4784
+    },
+    "lfm2.5 | factual_correctness | qwen3_4b-instruct minus nemotron-3-nano_4b": {
+      "diff": -0.0528,
+      "ci95": [
+        -0.0992,
+        -0.006300000000000009
+      ],
+      "p_two_sided_bootstrap": 0.0276,
+      "n_paired": 100,
+      "p_holm": 0.138
+    }
+  },
+  "intersection": {
+    "qwen3 | faithfulness": {
+      "items_valid_for_all_models": 93,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.762253009833655,
+        "ministral-3_8b": 0.6186082181332125,
+        "gemma3_4b": 0.7443606572638831,
+        "qwen3_4b-instruct": 0.6832001665862646,
+        "nemotron-3-nano_4b": 0.6747449682933554
+      }
+    },
+    "qwen3 | answer_relevancy": {
+      "items_valid_for_all_models": 99,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.8606863579696443,
+        "ministral-3_8b": 0.912478531926253,
+        "gemma3_4b": 0.877194009978507,
+        "qwen3_4b-instruct": 0.8727850113624175,
+        "nemotron-3-nano_4b": 0.9141054102142138
+      }
+    },
+    "qwen3 | factual_correctness": {
+      "items_valid_for_all_models": 91,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.39219780219780215,
+        "ministral-3_8b": 0.3868131868131868,
+        "gemma3_4b": 0.4142857142857143,
+        "qwen3_4b-instruct": 0.41219780219780217,
+        "nemotron-3-nano_4b": 0.44472527472527473
+      }
+    },
+    "qwen3 | context_recall": {
+      "items_valid_for_all_models": 46,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.5072463768115941,
+        "ministral-3_8b": 0.5072463768115941,
+        "gemma3_4b": 0.5072463768115941,
+        "qwen3_4b-instruct": 0.5072463768115941,
+        "nemotron-3-nano_4b": 0.5072463768115941
+      }
+    },
+    "qwen3 | llm_context_precision_with_reference": {
+      "items_valid_for_all_models": 76,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.8684210525447368,
+        "ministral-3_8b": 0.8684210525447368,
+        "gemma3_4b": 0.8684210525447368,
+        "qwen3_4b-instruct": 0.8684210525447368,
+        "nemotron-3-nano_4b": 0.8684210525447368
+      }
+    },
+    "nemotron | faithfulness": {
+      "items_valid_for_all_models": 95,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.9255453026505658,
+        "ministral-3_8b": 0.8402605360468165,
+        "gemma3_4b": 0.9256892230576441,
+        "qwen3_4b-instruct": 0.8684159162095911,
+        "nemotron-3-nano_4b": 0.8723009738799212
+      }
+    },
+    "nemotron | answer_relevancy": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.7568675685671064,
+        "ministral-3_8b": 0.8088967758724271,
+        "gemma3_4b": 0.814252990389161,
+        "qwen3_4b-instruct": 0.7625246259914494,
+        "nemotron-3-nano_4b": 0.8104908801101025
+      }
+    },
+    "nemotron | factual_correctness": {
+      "items_valid_for_all_models": 97,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.5458762886597939,
+        "ministral-3_8b": 0.6048453608247423,
+        "gemma3_4b": 0.5516494845360824,
+        "qwen3_4b-instruct": 0.5816494845360825,
+        "nemotron-3-nano_4b": 0.6029896907216495
+      }
+    },
+    "nemotron | context_recall": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.6891666666666667,
+        "ministral-3_8b": 0.6891666666666667,
+        "gemma3_4b": 0.6808333333333333,
+        "qwen3_4b-instruct": 0.6891666666666667,
+        "nemotron-3-nano_4b": 0.6891666666666667
+      }
+    },
+    "nemotron | llm_context_precision_with_reference": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.779999999922,
+        "ministral-3_8b": 0.779999999922,
+        "gemma3_4b": 0.7699999999230001,
+        "qwen3_4b-instruct": 0.779999999922,
+        "nemotron-3-nano_4b": 0.779999999922
+      }
+    },
+    "cogito | faithfulness": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.9276329365079365,
+        "ministral-3_8b": 0.7425451366000689,
+        "gemma3_4b": 0.8714080086580087,
+        "qwen3_4b-instruct": 0.8362619497461603,
+        "nemotron-3-nano_4b": 0.7869518176268175
+      }
+    },
+    "cogito | answer_relevancy": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.79360580704012,
+        "ministral-3_8b": 0.8433172460628107,
+        "gemma3_4b": 0.8560177688166287,
+        "qwen3_4b-instruct": 0.7927467924607666,
+        "nemotron-3-nano_4b": 0.879989762188548
+      }
+    },
+    "cogito | factual_correctness": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.49340000000000006,
+        "ministral-3_8b": 0.435,
+        "gemma3_4b": 0.49700000000000005,
+        "qwen3_4b-instruct": 0.4928,
+        "nemotron-3-nano_4b": 0.5407
+      }
+    },
+    "cogito | context_recall": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.6658333333333333,
+        "ministral-3_8b": 0.6658333333333333,
+        "gemma3_4b": 0.6658333333333333,
+        "qwen3_4b-instruct": 0.6658333333333333,
+        "nemotron-3-nano_4b": 0.6658333333333333
+      }
+    },
+    "cogito | llm_context_precision_with_reference": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.6599999999339999,
+        "ministral-3_8b": 0.6599999999339999,
+        "gemma3_4b": 0.6599999999339999,
+        "qwen3_4b-instruct": 0.6599999999339999,
+        "nemotron-3-nano_4b": 0.6599999999339999
+      }
+    },
+    "granite | faithfulness": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.8810714285714286,
+        "ministral-3_8b": 0.7867732023308649,
+        "gemma3_4b": 0.8905653235653236,
+        "qwen3_4b-instruct": 0.8472675355690061,
+        "nemotron-3-nano_4b": 0.8184801587301587
+      }
+    },
+    "granite | answer_relevancy": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.8019234364442304,
+        "ministral-3_8b": 0.862617738979073,
+        "gemma3_4b": 0.872065645869864,
+        "qwen3_4b-instruct": 0.8212451905810861,
+        "nemotron-3-nano_4b": 0.90222185694465
+      }
+    },
+    "granite | factual_correctness": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.4832,
+        "ministral-3_8b": 0.4288,
+        "gemma3_4b": 0.4722,
+        "qwen3_4b-instruct": 0.4868,
+        "nemotron-3-nano_4b": 0.48340000000000005
+      }
+    },
+    "granite | context_recall": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.68,
+        "ministral-3_8b": 0.68,
+        "gemma3_4b": 0.68,
+        "qwen3_4b-instruct": 0.68,
+        "nemotron-3-nano_4b": 0.68
+      }
+    },
+    "granite | llm_context_precision_with_reference": {
+      "items_valid_for_all_models": 99,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.6969696969000001,
+        "ministral-3_8b": 0.6969696969000001,
+        "gemma3_4b": 0.6969696969000001,
+        "qwen3_4b-instruct": 0.6969696969000001,
+        "nemotron-3-nano_4b": 0.6969696969000001
+      }
+    },
+    "lfm2.5 | faithfulness": {
+      "items_valid_for_all_models": 97,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.890482212518295,
+        "ministral-3_8b": 0.7627854981980599,
+        "gemma3_4b": 0.8906751610359858,
+        "qwen3_4b-instruct": 0.8687436370297698,
+        "nemotron-3-nano_4b": 0.8533507443301258
+      }
+    },
+    "lfm2.5 | answer_relevancy": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.8875342644499911,
+        "ministral-3_8b": 0.8804522768466682,
+        "gemma3_4b": 0.8713549402621978,
+        "qwen3_4b-instruct": 0.9002835686919332,
+        "nemotron-3-nano_4b": 0.9054380526709066
+      }
+    },
+    "lfm2.5 | factual_correctness": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.4732,
+        "ministral-3_8b": 0.40049999999999997,
+        "gemma3_4b": 0.4901,
+        "qwen3_4b-instruct": 0.4807,
+        "nemotron-3-nano_4b": 0.5335
+      }
+    },
+    "lfm2.5 | context_recall": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.595,
+        "ministral-3_8b": 0.615,
+        "gemma3_4b": 0.6216666666666666,
+        "qwen3_4b-instruct": 0.6216666666666666,
+        "nemotron-3-nano_4b": 0.6216666666666666
+      }
+    },
+    "lfm2.5 | llm_context_precision_with_reference": {
+      "items_valid_for_all_models": 100,
+      "means": {
+        "glm-4.7-flash_q4_K_M": 0.739999999926,
+        "ministral-3_8b": 0.749999999925,
+        "gemma3_4b": 0.779999999922,
+        "qwen3_4b-instruct": 0.7699999999230001,
+        "nemotron-3-nano_4b": 0.7699999999230001
+      }
+    }
+  },
+  "per_pillar": {
+    "qwen3 | faithfulness | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.7093891402714931,
+      "n_valid": 34,
+      "n": 34
+    },
+    "qwen3 | faithfulness | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.7670773670773671,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | faithfulness | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.8421006944444445,
+      "n_valid": 32,
+      "n": 33
+    },
+    "qwen3 | faithfulness | ministral-3_8b | E": {
+      "mean": 0.5835014490921453,
+      "n_valid": 34,
+      "n": 34
+    },
+    "qwen3 | faithfulness | ministral-3_8b | S": {
+      "mean": 0.6545745051912034,
+      "n_valid": 31,
+      "n": 33
+    },
+    "qwen3 | faithfulness | ministral-3_8b | G": {
+      "mean": 0.619748559881565,
+      "n_valid": 31,
+      "n": 33
+    },
+    "qwen3 | faithfulness | gemma3_4b | E": {
+      "mean": 0.7431298276886512,
+      "n_valid": 34,
+      "n": 34
+    },
+    "qwen3 | faithfulness | gemma3_4b | S": {
+      "mean": 0.7259740259740259,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | faithfulness | gemma3_4b | G": {
+      "mean": 0.7917267917267917,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | faithfulness | qwen3_4b-instruct | E": {
+      "mean": 0.6243702921214883,
+      "n_valid": 33,
+      "n": 34
+    },
+    "qwen3 | faithfulness | qwen3_4b-instruct | S": {
+      "mean": 0.7456698183970911,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | faithfulness | qwen3_4b-instruct | G": {
+      "mean": 0.6917627740805338,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | faithfulness | nemotron-3-nano_4b | E": {
+      "mean": 0.6562337172631291,
+      "n_valid": 34,
+      "n": 34
+    },
+    "qwen3 | faithfulness | nemotron-3-nano_4b | S": {
+      "mean": 0.6825674325674326,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | faithfulness | nemotron-3-nano_4b | G": {
+      "mean": 0.676758658008658,
+      "n_valid": 32,
+      "n": 33
+    },
+    "qwen3 | answer_relevancy | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.8396761404702556,
+      "n_valid": 34,
+      "n": 34
+    },
+    "qwen3 | answer_relevancy | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.863488486953298,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | answer_relevancy | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.8837527452590078,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | answer_relevancy | ministral-3_8b | E": {
+      "mean": 0.8724024808692498,
+      "n_valid": 34,
+      "n": 34
+    },
+    "qwen3 | answer_relevancy | ministral-3_8b | S": {
+      "mean": 0.9007632744005164,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | answer_relevancy | ministral-3_8b | G": {
+      "mean": 0.9629866971790223,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | answer_relevancy | gemma3_4b | E": {
+      "mean": 0.8846805735038075,
+      "n_valid": 34,
+      "n": 34
+    },
+    "qwen3 | answer_relevancy | gemma3_4b | S": {
+      "mean": 0.8563077376595187,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | answer_relevancy | gemma3_4b | G": {
+      "mean": 0.8925928089065156,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | answer_relevancy | qwen3_4b-instruct | E": {
+      "mean": 0.8154318187448082,
+      "n_valid": 34,
+      "n": 34
+    },
+    "qwen3 | answer_relevancy | qwen3_4b-instruct | S": {
+      "mean": 0.8336481871008286,
+      "n_valid": 32,
+      "n": 33
+    },
+    "qwen3 | answer_relevancy | qwen3_4b-instruct | G": {
+      "mean": 0.9698270394039196,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | answer_relevancy | nemotron-3-nano_4b | E": {
+      "mean": 0.8981395560186389,
+      "n_valid": 34,
+      "n": 34
+    },
+    "qwen3 | answer_relevancy | nemotron-3-nano_4b | S": {
+      "mean": 0.8797364849869327,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | answer_relevancy | nemotron-3-nano_4b | G": {
+      "mean": 0.9675268697577167,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | factual_correctness | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.3306060606060606,
+      "n_valid": 33,
+      "n": 34
+    },
+    "qwen3 | factual_correctness | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.3778787878787879,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | factual_correctness | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.4460606060606061,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | factual_correctness | ministral-3_8b | E": {
+      "mean": 0.40424242424242424,
+      "n_valid": 33,
+      "n": 34
+    },
+    "qwen3 | factual_correctness | ministral-3_8b | S": {
+      "mean": 0.3545161290322581,
+      "n_valid": 31,
+      "n": 33
+    },
+    "qwen3 | factual_correctness | ministral-3_8b | G": {
+      "mean": 0.3978125,
+      "n_valid": 32,
+      "n": 33
+    },
+    "qwen3 | factual_correctness | gemma3_4b | E": {
+      "mean": 0.44441176470588234,
+      "n_valid": 34,
+      "n": 34
+    },
+    "qwen3 | factual_correctness | gemma3_4b | S": {
+      "mean": 0.36875,
+      "n_valid": 32,
+      "n": 33
+    },
+    "qwen3 | factual_correctness | gemma3_4b | G": {
+      "mean": 0.411875,
+      "n_valid": 32,
+      "n": 33
+    },
+    "qwen3 | factual_correctness | qwen3_4b-instruct | E": {
+      "mean": 0.4572727272727273,
+      "n_valid": 33,
+      "n": 34
+    },
+    "qwen3 | factual_correctness | qwen3_4b-instruct | S": {
+      "mean": 0.3306060606060606,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | factual_correctness | qwen3_4b-instruct | G": {
+      "mean": 0.440625,
+      "n_valid": 32,
+      "n": 33
+    },
+    "qwen3 | factual_correctness | nemotron-3-nano_4b | E": {
+      "mean": 0.465,
+      "n_valid": 34,
+      "n": 34
+    },
+    "qwen3 | factual_correctness | nemotron-3-nano_4b | S": {
+      "mean": 0.37272727272727274,
+      "n_valid": 33,
+      "n": 33
+    },
+    "qwen3 | factual_correctness | nemotron-3-nano_4b | G": {
+      "mean": 0.45999999999999996,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | faithfulness | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.9384772090654443,
+      "n_valid": 34,
+      "n": 34
+    },
+    "nemotron | faithfulness | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.9068662818662818,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | faithfulness | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.9260199396563032,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | faithfulness | ministral-3_8b | E": {
+      "mean": 0.8075731931993791,
+      "n_valid": 33,
+      "n": 34
+    },
+    "nemotron | faithfulness | ministral-3_8b | S": {
+      "mean": 0.8612314669227401,
+      "n_valid": 32,
+      "n": 33
+    },
+    "nemotron | faithfulness | ministral-3_8b | G": {
+      "mean": 0.8508171839054192,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | faithfulness | gemma3_4b | E": {
+      "mean": 0.9505208333333334,
+      "n_valid": 32,
+      "n": 34
+    },
+    "nemotron | faithfulness | gemma3_4b | S": {
+      "mean": 0.9178932178932179,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | faithfulness | gemma3_4b | G": {
+      "mean": 0.9161616161616162,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | faithfulness | qwen3_4b-instruct | E": {
+      "mean": 0.8902863777089783,
+      "n_valid": 34,
+      "n": 34
+    },
+    "nemotron | faithfulness | qwen3_4b-instruct | S": {
+      "mean": 0.8461637780112045,
+      "n_valid": 32,
+      "n": 33
+    },
+    "nemotron | faithfulness | qwen3_4b-instruct | G": {
+      "mean": 0.8692687162054751,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | faithfulness | nemotron-3-nano_4b | E": {
+      "mean": 0.7998746351687529,
+      "n_valid": 34,
+      "n": 34
+    },
+    "nemotron | faithfulness | nemotron-3-nano_4b | S": {
+      "mean": 0.8830105080105081,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | faithfulness | nemotron-3-nano_4b | G": {
+      "mean": 0.9304054531327259,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | answer_relevancy | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.6955605354693529,
+      "n_valid": 34,
+      "n": 34
+    },
+    "nemotron | answer_relevancy | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.8080242490754748,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | answer_relevancy | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.7688757100382413,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | answer_relevancy | ministral-3_8b | E": {
+      "mean": 0.7908115679282879,
+      "n_valid": 34,
+      "n": 34
+    },
+    "nemotron | answer_relevancy | ministral-3_8b | S": {
+      "mean": 0.826890435950073,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | answer_relevancy | ministral-3_8b | G": {
+      "mean": 0.8095363603432882,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | answer_relevancy | gemma3_4b | E": {
+      "mean": 0.8335282528686031,
+      "n_valid": 34,
+      "n": 34
+    },
+    "nemotron | answer_relevancy | gemma3_4b | S": {
+      "mean": 0.7919821002913766,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | answer_relevancy | gemma3_4b | G": {
+      "mean": 0.8166645191444896,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | answer_relevancy | qwen3_4b-instruct | E": {
+      "mean": 0.6888991061349725,
+      "n_valid": 34,
+      "n": 34
+    },
+    "nemotron | answer_relevancy | qwen3_4b-instruct | S": {
+      "mean": 0.7949588016651052,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | answer_relevancy | qwen3_4b-instruct | G": {
+      "mean": 0.8059470465335579,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | answer_relevancy | nemotron-3-nano_4b | E": {
+      "mean": 0.814821985020048,
+      "n_valid": 34,
+      "n": 34
+    },
+    "nemotron | answer_relevancy | nemotron-3-nano_4b | S": {
+      "mean": 0.7551767115947335,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | answer_relevancy | nemotron-3-nano_4b | G": {
+      "mean": 0.8613426981121947,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | factual_correctness | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.5290909090909092,
+      "n_valid": 33,
+      "n": 34
+    },
+    "nemotron | factual_correctness | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.55875,
+      "n_valid": 32,
+      "n": 33
+    },
+    "nemotron | factual_correctness | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.5518181818181819,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | factual_correctness | ministral-3_8b | E": {
+      "mean": 0.611764705882353,
+      "n_valid": 34,
+      "n": 34
+    },
+    "nemotron | factual_correctness | ministral-3_8b | S": {
+      "mean": 0.5787878787878789,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | factual_correctness | ministral-3_8b | G": {
+      "mean": 0.6172727272727273,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | factual_correctness | gemma3_4b | E": {
+      "mean": 0.5779411764705882,
+      "n_valid": 34,
+      "n": 34
+    },
+    "nemotron | factual_correctness | gemma3_4b | S": {
+      "mean": 0.5230303030303031,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | factual_correctness | gemma3_4b | G": {
+      "mean": 0.538125,
+      "n_valid": 32,
+      "n": 33
+    },
+    "nemotron | factual_correctness | qwen3_4b-instruct | E": {
+      "mean": 0.6261764705882352,
+      "n_valid": 34,
+      "n": 34
+    },
+    "nemotron | factual_correctness | qwen3_4b-instruct | S": {
+      "mean": 0.5545454545454546,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | factual_correctness | qwen3_4b-instruct | G": {
+      "mean": 0.5733333333333333,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | factual_correctness | nemotron-3-nano_4b | E": {
+      "mean": 0.6111764705882353,
+      "n_valid": 34,
+      "n": 34
+    },
+    "nemotron | factual_correctness | nemotron-3-nano_4b | S": {
+      "mean": 0.6006060606060606,
+      "n_valid": 33,
+      "n": 33
+    },
+    "nemotron | factual_correctness | nemotron-3-nano_4b | G": {
+      "mean": 0.5760606060606062,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | faithfulness | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.9332633053221289,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | faithfulness | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.9118686868686868,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | faithfulness | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.9375962000962001,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | faithfulness | ministral-3_8b | E": {
+      "mean": 0.6820897792909179,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | faithfulness | ministral-3_8b | S": {
+      "mean": 0.7886877011877012,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | faithfulness | ministral-3_8b | G": {
+      "mean": 0.7586899098461077,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | faithfulness | gemma3_4b | E": {
+      "mean": 0.8771103896103896,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | faithfulness | gemma3_4b | S": {
+      "mean": 0.843939393939394,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | faithfulness | gemma3_4b | G": {
+      "mean": 0.893001443001443,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | faithfulness | qwen3_4b-instruct | E": {
+      "mean": 0.8691887656648173,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | faithfulness | qwen3_4b-instruct | S": {
+      "mean": 0.7988332188810658,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | faithfulness | qwen3_4b-instruct | G": {
+      "mean": 0.8397660823920323,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | faithfulness | nemotron-3-nano_4b | E": {
+      "mean": 0.7839431157078216,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | faithfulness | nemotron-3-nano_4b | S": {
+      "mean": 0.7579521909067364,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | faithfulness | nemotron-3-nano_4b | G": {
+      "mean": 0.819051319051319,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | answer_relevancy | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.7118600489632467,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | answer_relevancy | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.8476157973932754,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | answer_relevancy | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.8238187189479854,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | answer_relevancy | ministral-3_8b | E": {
+      "mean": 0.7883672509980952,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | answer_relevancy | ministral-3_8b | S": {
+      "mean": 0.8260550375727027,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | answer_relevancy | ministral-3_8b | G": {
+      "mean": 0.9171946009832314,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | answer_relevancy | gemma3_4b | E": {
+      "mean": 0.8670140933740441,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | answer_relevancy | gemma3_4b | S": {
+      "mean": 0.8426276889234742,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | answer_relevancy | gemma3_4b | G": {
+      "mean": 0.8580783021960825,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | answer_relevancy | qwen3_4b-instruct | E": {
+      "mean": 0.6951494992586745,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | answer_relevancy | qwen3_4b-instruct | S": {
+      "mean": 0.8240307599265357,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | answer_relevancy | qwen3_4b-instruct | G": {
+      "mean": 0.8620176119304862,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | answer_relevancy | nemotron-3-nano_4b | E": {
+      "mean": 0.8635969718998895,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | answer_relevancy | nemotron-3-nano_4b | S": {
+      "mean": 0.8379278303916663,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | answer_relevancy | nemotron-3-nano_4b | G": {
+      "mean": 0.9389412354949563,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | factual_correctness | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.543235294117647,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | factual_correctness | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.4596969696969697,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | factual_correctness | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.47575757575757577,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | factual_correctness | ministral-3_8b | E": {
+      "mean": 0.44029411764705884,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | factual_correctness | ministral-3_8b | S": {
+      "mean": 0.4178787878787879,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | factual_correctness | ministral-3_8b | G": {
+      "mean": 0.44666666666666666,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | factual_correctness | gemma3_4b | E": {
+      "mean": 0.5202941176470589,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | factual_correctness | gemma3_4b | S": {
+      "mean": 0.4687878787878788,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | factual_correctness | gemma3_4b | G": {
+      "mean": 0.5012121212121212,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | factual_correctness | qwen3_4b-instruct | E": {
+      "mean": 0.49323529411764705,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | factual_correctness | qwen3_4b-instruct | S": {
+      "mean": 0.4806060606060606,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | factual_correctness | qwen3_4b-instruct | G": {
+      "mean": 0.5045454545454545,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | factual_correctness | nemotron-3-nano_4b | E": {
+      "mean": 0.6029411764705882,
+      "n_valid": 34,
+      "n": 34
+    },
+    "cogito | factual_correctness | nemotron-3-nano_4b | S": {
+      "mean": 0.5103030303030303,
+      "n_valid": 33,
+      "n": 33
+    },
+    "cogito | factual_correctness | nemotron-3-nano_4b | G": {
+      "mean": 0.506969696969697,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | faithfulness | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.8487394957983193,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | faithfulness | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.9080808080808082,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | faithfulness | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.8873737373737374,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | faithfulness | ministral-3_8b | E": {
+      "mean": 0.7155054773430297,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | faithfulness | ministral-3_8b | S": {
+      "mean": 0.8028903756176484,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | faithfulness | ministral-3_8b | G": {
+      "mean": 0.844083382061851,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | faithfulness | gemma3_4b | E": {
+      "mean": 0.8746498599439776,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | faithfulness | gemma3_4b | S": {
+      "mean": 0.9176046176046176,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | faithfulness | gemma3_4b | G": {
+      "mean": 0.87992377992378,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | faithfulness | qwen3_4b-instruct | E": {
+      "mean": 0.8488855915326504,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | faithfulness | qwen3_4b-instruct | S": {
+      "mean": 0.8607438857438857,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | faithfulness | qwen3_4b-instruct | G": {
+      "mean": 0.832124097431584,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | faithfulness | nemotron-3-nano_4b | E": {
+      "mean": 0.8258870214752567,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | faithfulness | nemotron-3-nano_4b | S": {
+      "mean": 0.8472703222703223,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | faithfulness | nemotron-3-nano_4b | G": {
+      "mean": 0.782058682058682,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | answer_relevancy | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.7011920453411947,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | answer_relevancy | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.8315232221951233,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | answer_relevancy | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.8761075081934345,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | answer_relevancy | ministral-3_8b | E": {
+      "mean": 0.8208604391939649,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | answer_relevancy | ministral-3_8b | S": {
+      "mean": 0.8073526453069917,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | answer_relevancy | ministral-3_8b | G": {
+      "mean": 0.9609055051570233,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | answer_relevancy | gemma3_4b | E": {
+      "mean": 0.8709021636582904,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | answer_relevancy | gemma3_4b | S": {
+      "mean": 0.8790626685127509,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | answer_relevancy | gemma3_4b | G": {
+      "mean": 0.866267362475265,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | answer_relevancy | qwen3_4b-instruct | E": {
+      "mean": 0.7383632076819444,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | answer_relevancy | qwen3_4b-instruct | S": {
+      "mean": 0.8507389037267361,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | answer_relevancy | qwen3_4b-instruct | G": {
+      "mean": 0.877145035573946,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | answer_relevancy | nemotron-3-nano_4b | E": {
+      "mean": 0.8921066404658193,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | answer_relevancy | nemotron-3-nano_4b | S": {
+      "mean": 0.8647930998903604,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | answer_relevancy | nemotron-3-nano_4b | G": {
+      "mean": 0.9500723521892501,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | factual_correctness | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.5429411764705883,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | factual_correctness | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.4387878787878788,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | factual_correctness | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.46606060606060606,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | factual_correctness | ministral-3_8b | E": {
+      "mean": 0.42735294117647055,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | factual_correctness | ministral-3_8b | S": {
+      "mean": 0.37757575757575756,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | factual_correctness | ministral-3_8b | G": {
+      "mean": 0.4815151515151515,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | factual_correctness | gemma3_4b | E": {
+      "mean": 0.503235294117647,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | factual_correctness | gemma3_4b | S": {
+      "mean": 0.38303030303030305,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | factual_correctness | gemma3_4b | G": {
+      "mean": 0.5293939393939393,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | factual_correctness | qwen3_4b-instruct | E": {
+      "mean": 0.5570588235294118,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | factual_correctness | qwen3_4b-instruct | S": {
+      "mean": 0.39121212121212123,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | factual_correctness | qwen3_4b-instruct | G": {
+      "mean": 0.51,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | factual_correctness | nemotron-3-nano_4b | E": {
+      "mean": 0.5367647058823529,
+      "n_valid": 34,
+      "n": 34
+    },
+    "granite | factual_correctness | nemotron-3-nano_4b | S": {
+      "mean": 0.406969696969697,
+      "n_valid": 33,
+      "n": 33
+    },
+    "granite | factual_correctness | nemotron-3-nano_4b | G": {
+      "mean": 0.5048484848484849,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | faithfulness | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.8943372803666921,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | faithfulness | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.8708573833573834,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | faithfulness | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.903970103970104,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | faithfulness | ministral-3_8b | E": {
+      "mean": 0.7384387545338487,
+      "n_valid": 33,
+      "n": 34
+    },
+    "lfm2.5 | faithfulness | ministral-3_8b | S": {
+      "mean": 0.7819606251743413,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | faithfulness | ministral-3_8b | G": {
+      "mean": 0.7682907675755333,
+      "n_valid": 31,
+      "n": 33
+    },
+    "lfm2.5 | faithfulness | gemma3_4b | E": {
+      "mean": 0.8442577030812325,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | faithfulness | gemma3_4b | S": {
+      "mean": 0.9165464165464166,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | faithfulness | gemma3_4b | G": {
+      "mean": 0.912465564738292,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | faithfulness | qwen3_4b-instruct | E": {
+      "mean": 0.8335258437812617,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | faithfulness | qwen3_4b-instruct | S": {
+      "mean": 0.8752855080627692,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | faithfulness | qwen3_4b-instruct | G": {
+      "mean": 0.8733821246979141,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | faithfulness | nemotron-3-nano_4b | E": {
+      "mean": 0.8088907824201942,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | faithfulness | nemotron-3-nano_4b | S": {
+      "mean": 0.8753783253783254,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | faithfulness | nemotron-3-nano_4b | G": {
+      "mean": 0.8567155908065,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | answer_relevancy | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.8637921235535703,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | answer_relevancy | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.9154061153482674,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | answer_relevancy | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.8841240132631784,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | answer_relevancy | ministral-3_8b | E": {
+      "mean": 0.8550550760009378,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | answer_relevancy | ministral-3_8b | S": {
+      "mean": 0.8581004802654045,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | answer_relevancy | ministral-3_8b | G": {
+      "mean": 0.9289708864205026,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | answer_relevancy | gemma3_4b | E": {
+      "mean": 0.8857001469972123,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | answer_relevancy | gemma3_4b | S": {
+      "mean": 0.8699672137017455,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | answer_relevancy | gemma3_4b | G": {
+      "mean": 0.8579627568532414,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | answer_relevancy | qwen3_4b-instruct | E": {
+      "mean": 0.9412329828637636,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | answer_relevancy | qwen3_4b-instruct | S": {
+      "mean": 0.8591272660401699,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | answer_relevancy | qwen3_4b-instruct | G": {
+      "mean": 0.8992495658333259,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | answer_relevancy | nemotron-3-nano_4b | E": {
+      "mean": 0.9028603815879873,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | answer_relevancy | nemotron-3-nano_4b | S": {
+      "mean": 0.876042170452353,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | answer_relevancy | nemotron-3-nano_4b | G": {
+      "mean": 0.9374897172173164,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | factual_correctness | glm-4.7-flash_q4_K_M | E": {
+      "mean": 0.5308823529411765,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | factual_correctness | glm-4.7-flash_q4_K_M | S": {
+      "mean": 0.44333333333333336,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | factual_correctness | glm-4.7-flash_q4_K_M | G": {
+      "mean": 0.44363636363636366,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | factual_correctness | ministral-3_8b | E": {
+      "mean": 0.4238235294117647,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | factual_correctness | ministral-3_8b | S": {
+      "mean": 0.35393939393939394,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | factual_correctness | ministral-3_8b | G": {
+      "mean": 0.42303030303030303,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | factual_correctness | gemma3_4b | E": {
+      "mean": 0.4994117647058824,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | factual_correctness | gemma3_4b | S": {
+      "mean": 0.47151515151515155,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | factual_correctness | gemma3_4b | G": {
+      "mean": 0.49909090909090903,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | factual_correctness | qwen3_4b-instruct | E": {
+      "mean": 0.4982352941176471,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | factual_correctness | qwen3_4b-instruct | S": {
+      "mean": 0.4284848484848485,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | factual_correctness | qwen3_4b-instruct | G": {
+      "mean": 0.5148484848484848,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | factual_correctness | nemotron-3-nano_4b | E": {
+      "mean": 0.5967647058823529,
+      "n_valid": 34,
+      "n": 34
+    },
+    "lfm2.5 | factual_correctness | nemotron-3-nano_4b | S": {
+      "mean": 0.4593939393939394,
+      "n_valid": 33,
+      "n": 33
+    },
+    "lfm2.5 | factual_correctness | nemotron-3-nano_4b | G": {
+      "mean": 0.5424242424242424,
+      "n_valid": 33,
+      "n": 33
+    }
+  },
+  "year_histogram": {
+    "2010": 9,
+    "2011": 12,
+    "2012": 8,
+    "2013": 11,
+    "2014": 8,
+    "2015": 15,
+    "2016": 9,
+    "2017": 22,
+    "2018": 19,
+    "2019": 20,
+    "2020": 22,
+    "2021": 27,
+    "2022": 17,
+    "2023": 33,
+    "2024": 52
+  },
+  "mean_response_chars": {
+    "glm-4.7-flash_q4_K_M": 463.85,
+    "ministral-3_8b": 1298.12,
+    "gemma3_4b": 334.35,
+    "qwen3_4b-instruct": 739.06,
+    "nemotron-3-nano_4b": 437.96
+  }
+}

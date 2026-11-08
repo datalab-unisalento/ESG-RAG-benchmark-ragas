@@ -1,0 +1,26 @@
+{
+  "judge_model": "nemotron-3.5-lightning:30b",
+  "n_rag_models": 2,
+  "results": [
+    {
+      "Model": "gemma3_4b",
+      "llm_context_precision_with_reference": 0.749999999925,
+      "context_precision": 0.749999999925,
+      "context_recall": 0.6175438596491227,
+      "context_relevance": 0.8575,
+      "faithfulness": 0.8377067660230926,
+      "factual_correctness": 0.4219791666666666,
+      "answer_relevancy": 0.8730865207171647
+    },
+    {
+      "Model": "glm-4.7-flash_q4_K_M",
+      "llm_context_precision_with_reference": 0.759999999924,
+      "context_precision": 0.759999999924,
+      "context_recall": 0.6175438596491227,
+      "context_relevance": 0.8625,
+      "faithfulness": 0.8626823468928733,
+      "factual_correctness": 0.42081632653061224,
+      "answer_relevancy": 0.8678999805524295
+    }
+  ]
+}

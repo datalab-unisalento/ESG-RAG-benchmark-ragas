@@ -18,7 +18,7 @@ set -u
 cd "$(dirname "$0")/.."
 
 PY=.venv/bin/python
-ROOT=outputs/repro
+ROOT="${REPRO_ROOT:-outputs/repro}"
 STALL_SECONDS=900
 MAX_TRIES=3
 MODELS=(qwen3:4b-instruct nemotron-3.5-lightning:30b cogito:32b gemma4:12b ministral-3:8b gemma3:4b glm-4.7-flash:q4_K_M nemotron-3-nano:4b)

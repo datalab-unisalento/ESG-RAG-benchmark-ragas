@@ -1,0 +1,50 @@
+{
+  "judge_models": [
+    "qwen3:4b-instruct",
+    "nemotron-3.5-lightning:30b",
+    "cogito:32b"
+  ],
+  "chunk_size": 10,
+  "response_files": [
+    {
+      "path": "outputs/repro2/rag_responses/rag_responses_gemma3_4b.json",
+      "sha256": "e14f96fe42b99ee70e61d6aebbc3c8c49600fa0c4d4aa9efc9f46528b10ce491",
+      "n_rows": 100
+    },
+    {
+      "path": "outputs/repro2/rag_responses/rag_responses_glm-4.7-flash_q4_K_M.json",
+      "sha256": "c74f25accef6e45b9e5ae183eb812c99a511aa266962080c4ecab588f590513d",
+      "n_rows": 100
+    },
+    {
+      "path": "outputs/repro2/rag_responses/rag_responses_ministral-3_8b.json",
+      "sha256": "5dd6da7bd3d5ce56ff44ab24ae407dd4dd52f241fbc82e0ddef9908617ae4134",
+      "n_rows": 100
+    },
+    {
+      "path": "outputs/repro2/rag_responses/rag_responses_nemotron-3-nano_4b.json",
+      "sha256": "ea68be0dfd517cd3a047f59ee62166ebd6c6f806cad234035135349780bab69e",
+      "n_rows": 100
+    },
+    {
+      "path": "outputs/repro2/rag_responses/rag_responses_qwen3_4b-instruct.json",
+      "sha256": "9ebfd786df79b296fdb7be80716b90d2954c885d2412be3181609675549a60a8",
+      "n_rows": 100
+    }
+  ],
+  "embedding_model": "qwen3-embedding:4b",
+  "metrics": [
+    "llm_context_precision_with_reference",
+    "context_precision",
+    "context_recall",
+    "context_relevance",
+    "faithfulness",
+    "factual_correctness",
+    "answer_relevancy"
+  ],
+  "judge_options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192
+  }
+}

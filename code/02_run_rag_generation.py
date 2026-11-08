@@ -25,7 +25,8 @@ MODEL_TAGS = {
 SYSTEM = "You are a helpful assistant that answers questions based on given documents only."
 
 # Decoding and context settings, identical for every model
-GEN_OPTIONS = {"temperature": 0, "seed": 42, "num_ctx": 8192, "num_predict": 1024}
+GEN_OPTIONS = {"temperature": 0, "seed": 42, "num_ctx": 8192, "num_predict": 1024,
+               "reasoning": False}  # thinking disabled: hidden reasoning otherwise uses the token budget
 
 
 def sha256(path):
